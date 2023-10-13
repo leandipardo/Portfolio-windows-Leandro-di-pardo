@@ -35,11 +35,6 @@ export default function cartelInicio($apagado){
             }, 2000);
         }
     })
-    window.onscroll = function() {
-        console.log("Vertical: " + window.scrollY);
-        console.log("Horizontal: " + window.scrollX);
-      
-      };
     setInterval(() => {
         window.scroll(0, 0);
     }, 500);
