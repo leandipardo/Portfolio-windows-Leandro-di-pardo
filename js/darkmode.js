@@ -11,7 +11,7 @@ ubiVideo = undefined,
 darkLight = "dark";
 const darkModeF = () => {
     darkLight ="dark";
-    ubiVideo = `/portfolio/assets/video/wallpaper dark mode.mp4`;
+    ubiVideo = `assets/video/wallpaper dark mode.mp4`;
     $video.setAttribute("src",`${ubiVideo}`)
     $moon.style.background="var(--dark-mode-hover-plus)";
     $moon.style.transform="translateX(5px)translateY(-3px)"
@@ -22,7 +22,7 @@ const darkModeF = () => {
 }
 const lightModeF = () =>{
     darkLight ="light";
-    ubiVideo = `/portfolio/assets/video/wallpaper light mode.mp4`;
+    ubiVideo = `assets/video/wallpaper light mode.mp4`;
     $video.setAttribute("src",`${ubiVideo}`)
     $moon.style.background ="rgba(255, 255, 255, 0.918)";
     $moon.style.transform = "translateX(0px)translateY(0px)";

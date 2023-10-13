@@ -15,7 +15,7 @@ export default function smartphone(e){
         }, 200);
       }
       if (e.deltaY === 100 && delta <= 1 && $ventanaabierta === null) {
-        $createSmartphone.setAttribute("src","/portfolio/assets/img/smartphone.png");
+        $createSmartphone.setAttribute("src","assets/img/smartphone.png");
         $blur.style.zIndex=`10`;
         $blur.style.height=`100vh`;
         $blur.style.width=`100vw`;

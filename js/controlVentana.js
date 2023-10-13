@@ -17,7 +17,7 @@ text = `
             <p>Me llamo Leandro, nací en Argentina y tengo 27 años, soy estudiante de Licenciatura en Sistemas. Tengo experiencia en diseño gráfico y también estudié programación web. Mi objetivo es seguir creciendo como desarrollador, ampliando constantemente mis habilidades con nuevas tecnologías y lenguajes.</p>
         </div>
         <div class="va-wave-div">
-            <img src="/portfolio/assets/img/wave.svg" alt="estadisticas random">
+            <img src="assets/img/wave.svg" alt="estadisticas random">
         </div>
         <div class="va-tecnologia-div">
             <h3>Habilidades.</h3>
@@ -97,7 +97,7 @@ export default function comportamientoVentanas(p){
             let $iconimg = d.createElement("img");
             $iconimg.setAttribute("identificador",`${$id}`);
             $iconimg.classList.add("button-menu");
-            $iconimg.setAttribute("src","/portfolio/assets/img/pdf icon.svg");
+            $iconimg.setAttribute("src","assets/img/pdf icon.svg");
             $iconimg.setAttribute("alt","Icono de pdf");
             $id++;
             $middleMenuConteiner.appendChild($iconimg);

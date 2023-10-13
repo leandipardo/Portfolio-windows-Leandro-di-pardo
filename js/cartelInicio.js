@@ -7,8 +7,8 @@ $audio = document.getElementById("audio"),
 $apagar = document.querySelector(".apagado"),
 $src = undefined;
 d.addEventListener("DOMContentLoaded", (e)=>{
-    if(ls.getItem("theme") === "light") $src=`/portfolio/assets/video/wallpaper light mode.mp4`;
-    if(ls.getItem("theme") === "dark") $src=`/portfolio/assets/video/wallpaper dark mode.mp4`;
+    if(ls.getItem("theme") === "light") $src=`assets/video/wallpaper light mode.mp4`;
+    if(ls.getItem("theme") === "dark") $src=`assets/video/wallpaper dark mode.mp4`;
 })
 export default function cartelInicio($apagado){
     $div.classList.add("parrafo-inicio");
