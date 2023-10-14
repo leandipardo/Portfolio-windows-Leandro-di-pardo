@@ -35,14 +35,13 @@ d.addEventListener("click", (e)=>{
     if(e.target.matches(btn)|| e.target.matches(`${btn} *`)){
         if(darkLight === "light"){
             darkModeF();
-            
         }else if(darkLight === "dark"){
             lightModeF();
         }
     }
 })
 d.addEventListener("DOMContentLoaded", (e)=>{
-    if(ls.getItem("theme") === null) ls.setItem("theme","light");
+    if(ls.getItem("theme") === null) ls.setItem("theme","dark");
     if(ls.getItem("theme") === "light") lightModeF();
     if(ls.getItem("theme") === "dark") darkModeF();
 })
