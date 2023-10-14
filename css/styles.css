@@ -548,11 +548,12 @@ body{
   position: relative;
   font-size: 2vh;
   height: 20%;
-  top: 10%;
+  top: 0;
   width: 80%;
   left: 10%;
   text-align: center;
-  color: var(--dark-mode-font);
+  color: white;
+  font-weight: 900;
 }
 .sp-contacto-container{
   position: relative;
@@ -580,7 +581,7 @@ body{
   padding: 5%;
   margin: 2%;
   background: linear-gradient(90deg, rgba(235,245,255,0) 0%, var(--dark-mode-background));
-  transition: opacity ease .5s;
+  transition: ease-in .5s;
   opacity: .4;
 }
 .sp-contacto-container li:nth-child(even){
@@ -589,6 +590,7 @@ body{
   background: linear-gradient(270deg, rgba(235,245,255,0) 0%, var(--dark-mode-background));
 }
 .sp-contacto-container li:hover{
+  background-color: var(--dark-mode-background);
   opacity: 1;
 }
           /* VENTANAS */
