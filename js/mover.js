@@ -1,7 +1,8 @@
 const d = document;
+let inter,
+validacion;
 //función creada por marta para mover ventanas.
 export default function mover(caja){
-    let inter;
     const element = d.querySelectorAll(caja); //selecciona .movible
     const moveMouse = (e) => {
             element.forEach(el => { 
@@ -11,7 +12,7 @@ export default function mover(caja){
     }
     d.addEventListener("mousemove", moveMouse);
     d.addEventListener("mousedown", (e) => {
-
+        console.log(validacion)
         e.preventDefault();
         clearInterval(inter);
         if (e.target.matches(caja)) {

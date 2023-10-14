@@ -94,7 +94,6 @@ body{
   z-index: -1;
   transition: backdrop-filter .5s ease;
 }
-
           /* BARRA DE TAREAS */
 
 .barra-de-tareas {
@@ -296,15 +295,6 @@ body{
 }
 .menu-translate{
   transform: translateY(100vh);
-  animation: opacityMenu .40s linear 0s 1 forwards;
-}
-@keyframes opacityMenu {
-  99%{
-    visibility: visible;
-  }100%{
-    visibility: hidden;
-  }
-  
 }
 
 /* Zona superior */
@@ -537,19 +527,70 @@ body{
   z-index: 10;
 }
 .screen{
-  height: 94%;
-  left: 15%;
-  width: 59%;
+  height: 93%;
+  left: 16%;
+  width: 57%;
   position: absolute;
   top:1%;
   z-index: 0;
-  border-radius: 10%;
+  border-radius: 27px;
   box-shadow: 0px 6px 20px -6px rgba(255,255,255,1);
   -webkit-box-shadow: 0px 6px 20px -6px rgba(255,255,255,1);
   -moz-box-shadow: 0px 6px 20px -6px rgba(255,255,255,1);
   background: linear-gradient(135deg, #f51d48 0%, #3F5EFB 100%);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  z-index: 11;
+  overflow: hidden;
 }
+.sp-p{
+  position: relative;
+  font-size: 2vh;
+  height: 20%;
+  top: 10%;
+  width: 80%;
+  left: 10%;
+  text-align: center;
+  color: var(--dark-mode-font);
+}
+.sp-contacto-container{
+  position: relative;
+  top: 0;
+  font-size: 2vh;
+  width: 90%;
+  justify-self: center;
+  height: 50%;
+  left: -7.5%;
+  display: flex;
+  justify-self: flex-start;
+  align-self: center;
+  flex-flow: column wrap;
 
+}
+.sp-contacto-container *{
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--dark-mode-font);
+  text-align: end;
+  font-weight: 600;
+}
+.sp-contacto-container li{
+  border-radius: 10px;
+  padding: 5%;
+  margin: 2%;
+  background: linear-gradient(90deg, rgba(235,245,255,0) 0%, var(--dark-mode-background));
+  transition: opacity ease .5s;
+  opacity: .4;
+}
+.sp-contacto-container li:nth-child(even){
+  text-align: start;
+  background: rgb(235,245,255);
+  background: linear-gradient(270deg, rgba(235,245,255,0) 0%, var(--dark-mode-background));
+}
+.sp-contacto-container li:hover{
+  opacity: 1;
+}
           /* VENTANAS */
 .ventana-abierta{
   transform-origin: center;
