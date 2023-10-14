@@ -4,7 +4,6 @@ $body = d.querySelector(".classDark");
 let firstTime = true,
 $div = document.createElement("div"),
 $audio = document.getElementById("audio"),
-$apagar = document.querySelector(".apagado"),
 $src = undefined;
 d.addEventListener("DOMContentLoaded", (e)=>{
     if(ls.getItem("theme") === "light") $src=`assets/video/wallpaper light mode.mp4`;
@@ -26,6 +25,7 @@ export default function cartelInicio($apagado){
             let $video = d.querySelector(".background-video");
             document.documentElement.requestFullscreen();
             $video.setAttribute("src",`${$src}`);
+            $video.setAttribute("autoplay","true");
             firstTime = false;
             setTimeout(() => {
                 $div.classList.toggle("parrafo-inicio");
