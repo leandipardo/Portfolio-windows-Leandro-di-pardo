@@ -127,6 +127,24 @@
   .va-tecnologia-texto::-webkit-scrollbar {
     visibility: hidden;
   }
+  .va-progress-bar{
+    width: 45px;
+    height: 15px;
+    background-color: rgba(199, 199, 199, 0.589);
+    position: sticky;
+    top: 15px;
+    border-radius: 10px;
+    left: calc(100% - 60px);
+    overflow: hidden;
+  }
+  .va-progres-point{
+    position: relative;
+    background-color: var(--dark-mode-font);
+    height: 15px;
+    width: 15px;
+    border-radius: 10px;
+    transition: 1s ease;
+  }
   .va-scrollbar-conteiner{
     position: absolute;
     background-color: black;

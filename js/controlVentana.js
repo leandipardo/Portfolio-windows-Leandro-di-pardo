@@ -23,6 +23,9 @@ text = `
             <h3>Habilidades.</h3>
         </div>
         <section class="va-tecnologia-texto">
+                <div class="va-progress-bar">
+                    <div class="va-progres-point"></div>
+                </div>
                 <div class="va-tecnologia-first">
                     <p>Desliza para saber más. →</p>
                     <h3>Como desarrollador web junior sumado a mis experiencias en diseño grafico, he adquirido un considerable conjunto de habilidades en diversas tecnologías para la creación de sitios web.</h3>
@@ -57,6 +60,7 @@ text = `
 import mover from "./mover.js";
 import mover_carousel from "./mover_carousel.js";
 import scrollBar from "./scrollbar.js";
+import barraSlice from "./ventana_barraslice.js";
 export default function comportamientoVentanas(p){
     d.addEventListener("click", (e)=>{
         let prueba = d.querySelector(".ventana-abierta");
@@ -100,6 +104,7 @@ export default function comportamientoVentanas(p){
             $id++;
             $middleMenuConteiner.appendChild($iconimg);
             $div2.innerHTML=text; 
+            barraSlice();
             mover_carousel('.va-tecnologia-texto');
             if (window.outerWidth <= 1024){
                 $section.classList.toggle("movible");
