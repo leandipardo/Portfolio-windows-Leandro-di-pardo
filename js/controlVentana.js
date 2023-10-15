@@ -8,8 +8,8 @@ mouseLastPos,
 text = `
 <div class="va-main">
     <section class="va-title">
-        <h2>Leandro Di Pardo.</h2>
-        <p>Desarrollador front end.</p>
+        <h2>Leandro <br> Di Pardo.</h2>
+
     </section>
     <section class="va-info">
         <div class="va-info-div">
