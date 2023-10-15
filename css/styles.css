@@ -376,14 +376,16 @@ body{
   visibility: hidden;
 }
 .mid-menu-container-icons div{
-  width: max-content;
+  width: 65px;
   padding: 10px 10px 0 10px;
   height: fit-content;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
   border-radius: 5px;
   font-size: smaller;
+  text-align: center;
 }
 .mid-menu-container-icons div img:active{
   transform: scale(.8);
@@ -406,7 +408,9 @@ body{
 .mid-menu-container-icons p{
   cursor: default;
 }
-
+.exe i{
+  font-size: .65rem;
+}
 /* Anteultima zona */
 .recomendaciones-menu{
   position: relative;
