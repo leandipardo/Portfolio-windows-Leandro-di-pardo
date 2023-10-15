@@ -141,7 +141,7 @@
     position: relative;
     background-color: var(--dark-mode-font);
     height: 15px;
-    width: 15px;
+    width: 0px;
     border-radius: 10px;
     transition: .5s ease-in;
   }

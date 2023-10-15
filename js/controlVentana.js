@@ -26,7 +26,7 @@ text = `
                 <div class="va-progress-bar">
                     <div class="va-progres-point"></div>
                 </div>
-                <div class="va-tecnologia-first">
+                <div class="va-tecnologia-first">   
                     <p>Desliza para saber más. →</p>
                     <h3>Como desarrollador web junior sumado a mis experiencias en diseño grafico, he adquirido un considerable conjunto de habilidades en diversas tecnologías para la creación de sitios web.</h3>
                 </div>

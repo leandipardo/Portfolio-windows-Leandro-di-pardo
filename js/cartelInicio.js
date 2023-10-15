@@ -1,7 +1,6 @@
 const d = document,
-ls=localStorage,
 $body = d.querySelector(".classDark");
-let firstTime = true,
+let firstTime,
 $div = document.createElement("div"),
 $audio = document.getElementById("audio"),
 confirmacion=false;
@@ -20,11 +19,11 @@ export default function cartelInicio($apagado){
             document.documentElement.requestFullscreen();
             confirmacion=false;
         }
-        if (firstTime === true){
+        if (firstTime !== true){
             $audio.play();
             $div.style.opacity=0;
             document.documentElement.requestFullscreen();
-            firstTime = false;
+            firstTime = true;
             setTimeout(() => {
                 $div.classList.toggle("parrafo-inicio");
                 setTimeout(() => {
