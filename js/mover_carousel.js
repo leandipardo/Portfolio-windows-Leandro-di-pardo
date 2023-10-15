@@ -26,7 +26,7 @@ export default function mover_carousel(carousel){
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - slider.offsetLeft;
-      const SCROLL_SPEED = 1.9;
+      const SCROLL_SPEED = 2.3;
       const walk = (x - startX) * SCROLL_SPEED;
       slider.scrollLeft = scrollLeft - walk;
     });

@@ -295,6 +295,7 @@ body{
 }
 .menu-translate{
   transform: translateY(100vh);
+  visibility: hidden;
 }
 
 /* Zona superior */
