@@ -20,6 +20,7 @@ d.addEventListener("click",(e)=> {
     }
     if(e.target.matches(globo)&& primerClick === 1){
         setTimeout(() => {
+            $textname.style.opacity = 0;
             textinfo = [];
             i = 0;
             a = textoB.split("");
@@ -46,7 +47,6 @@ d.addEventListener("click",(e)=> {
     if(e.target.matches(globo)&& primerClick === 4){
         primerClick = 5;
         clearInterval(intervaloTexto);
-        $textname.style.opacity = 0;
         setTimeout(() => {
             $textinfo.style.height=0;
             $textinfo.style.opacity="0";
