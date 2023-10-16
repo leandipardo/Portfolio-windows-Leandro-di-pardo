@@ -11,6 +11,6 @@ d.addEventListener("touchmove",(e)=>{
     setTimeout(() => {
         cuenta = Math.round(Math.abs(($v.clientWidth - $v.scrollLeft / $v.clientWidth) - $v.clientWidth))*25;
         $b.style.width=`${(cuenta)}%`;
-    }, 500);
+    }, 1);
 });
 }
