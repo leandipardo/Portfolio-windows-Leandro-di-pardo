@@ -79,6 +79,7 @@ export default function cartelInicio($apagado){
             createVideoSourceLight.setAttribute("alt","video-wallpaper");
             createVideoSourceLight.setAttribute("src","/assets/video/wallpaper light mode.mp4");
             createVideoLight.appendChild(createVideoSourceLight);
+            createVideoLight.play();
             $audio.play();
             $div.style.opacity=0;
             firstTime = true;
