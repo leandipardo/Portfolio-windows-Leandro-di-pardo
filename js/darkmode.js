@@ -32,7 +32,6 @@ d.addEventListener("click", (e)=>{
             $videoContainer.appendChild(createVideo);
             createVideoSource.classList.add("source-video");
             createVideoSource.setAttribute("type","video/mp4");
-            createVideoSource.setAttribute("type","video/mp4");
             createVideoSource.setAttribute("muted","true");
             createVideoSource.setAttribute("autoplay","true");
             createVideoSource.setAttribute("playsinline","true");
@@ -59,7 +58,6 @@ d.addEventListener("click", (e)=>{
             createVideoLight.setAttribute("src","/assets/video/wallpaper light mode.mp4");
             $videoContainer.appendChild(createVideoLight);
             createVideoSourceLight.classList.add("source-video");
-            createVideoSourceLight.setAttribute("type","video/mp4");
             createVideoSourceLight.setAttribute("type","video/mp4");
             createVideoSourceLight.setAttribute("muted","true");
             createVideoSourceLight.setAttribute("autoplay","true");

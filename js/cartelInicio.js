@@ -24,24 +24,6 @@ export default function cartelInicio($apagado){
         }
         if (firstTime !== true){
             $audio.play();
-            createVideoLight.classList.add("background-video");
-            createVideoLight.setAttribute("type","video/mp4");
-            createVideoLight.setAttribute("muted","true");
-            createVideoLight.setAttribute("autoplay","true");
-            createVideoLight.setAttribute("playsinline","true");
-            createVideoLight.setAttribute("alt","video-wallpaper");
-            createVideoLight.setAttribute("src","/assets/video/wallpaper light mode.mp4");
-            $videoContainer.appendChild(createVideoLight);
-            createVideoSourceLight.classList.add("source-video");
-            createVideoSourceLight.setAttribute("type","video/mp4");
-            createVideoSourceLight.setAttribute("type","video/mp4");
-            createVideoSourceLight.setAttribute("muted","true");
-            createVideoSourceLight.setAttribute("autoplay","true");
-            createVideoSourceLight.setAttribute("playsinline","true");
-            createVideoSourceLight.setAttribute("alt","video-wallpaper");
-            createVideoSourceLight.setAttribute("src","/assets/video/wallpaper light mode.mp4");
-            createVideoLight.appendChild(createVideoSourceLight);
-            createVideoLight.play();
             $div.style.opacity=0;
             firstTime = true;
             setTimeout(() => {
