@@ -17,7 +17,7 @@ export default function cartelInicio($apagado){
             confirmacion=false;
         }
         if(e.target.matches($apagado)||e.target.matches(`${$apagado} *`)&&confirmacion===false){
-            document.documentElement.requestFullscreen();
+            d.documentElement.requestFullscreen();
             confirmacion=true;
         }
         if (firstTime !== true){
@@ -33,7 +33,7 @@ export default function cartelInicio($apagado){
             }, 2000);
         }
     })
-    d.addEventListener("Touch",(e)=>{
+    d.addEventListener("touchstart",(e)=>{
         if(e.target.matches($apagado)||e.target.matches(`${$apagado} *`)&&confirmacion===true){
             d.exitFullscreen();
             confirmacion=false;
