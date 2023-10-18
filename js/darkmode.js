@@ -33,9 +33,10 @@ d.addEventListener("click", (e)=>{
             createVideoSource.classList.add("source-video");
             createVideoSource.setAttribute("type","video/mp4");
             createVideoSource.setAttribute("muted","");
-            createVideoSource.setAttribute("autoplay","autoplay");
+            createVideoSource.setAttribute("autoplay","");
             createVideoSource.setAttribute("playsinline","");
             createVideoSource.setAttribute("alt","video-wallpaper");
+            createVideoSource.setAttribute("src","/assets/video/wallpaper dark mode.mp4");
             createVideo.appendChild(createVideoSource);
         }else if(darkLight === "dark"){
             darkLight ="light";
@@ -58,7 +59,7 @@ d.addEventListener("click", (e)=>{
             createVideoSourceLight.classList.add("source-video");
             createVideoSourceLight.setAttribute("type","video/mp4");
             createVideoSourceLight.setAttribute("muted","");
-            createVideoSourceLight.setAttribute("autoplay","autoplay");
+            createVideoSourceLight.setAttribute("autoplay","");
             createVideoSourceLight.setAttribute("playsinline","");
             createVideoSourceLight.setAttribute("alt","video-wallpaper");
             createVideoLight.appendChild(createVideoSourceLight);
