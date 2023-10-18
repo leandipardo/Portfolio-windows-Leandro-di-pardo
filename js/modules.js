@@ -1,4 +1,5 @@
-const d = document;
+const d = document,
+w=window;
 import menuSlide from "./menu.js";
 import smartphone from "./smartphone.js";
 import explicacion from "./explicacion.js";
@@ -10,8 +11,10 @@ import cartelInicio from "./cartelInicio.js";
 import comportamientoVentanas from "./controlVentana.js";
 import botones from "./botonesVentana.js";
 import chrome from "./chromeBtn.js";
+import cargaVideo from "./cargaVideo.js";
 d.addEventListener("DOMContentLoaded", (e)=>{
-    cartelInicio(".apagado");
+    cargaVideo("source-video","(min-width: 1024px)");
+    cartelInicio(".apagado","min-width: 1024px","source-video");
     menuSlide(".button-menuu",".menu",".ignore",".exe");
     abrirMenuIzq(".menu-desplegable", ".menu-derecho",".ignore2",".exe2");
     time();

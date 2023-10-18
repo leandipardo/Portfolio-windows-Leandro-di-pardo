@@ -3,10 +3,8 @@ $body = d.querySelector("body");
 let firstTime,
 $div = d.createElement("div"),
 $audio = d.getElementById("audio"),
-$videoContainer = d.querySelector(".wallpaper"),
-confirmacion=false,
-createVideoLight = d.createElement("video"),
-createVideoSourceLight = d.createElement("source");
+w= window,
+confirmacion=false;
 export default function cartelInicio($apagado){
     $div.classList.add("parrafo-inicio");
     $div.innerHTML =`
