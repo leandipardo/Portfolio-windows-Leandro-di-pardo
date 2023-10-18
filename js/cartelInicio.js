@@ -3,7 +3,9 @@ $body = d.querySelector("body");
 let firstTime,
 $div = d.createElement("div"),
 $audio = d.getElementById("audio"),
-$video =d.querySelector(".background-video"),
+$video = d.querySelector(".background-video"),
+$videoSource = d.querySelector(".source-video"),
+$videoContainer = d.querySelector(".wallpaper"),
 confirmacion=false;
 export default function cartelInicio($apagado){
     $div.classList.add("parrafo-inicio");
@@ -21,7 +23,25 @@ export default function cartelInicio($apagado){
             confirmacion=true;
         }
         if (firstTime !== true){
-            $video.setAttribute("src","assets/video/wallpaper light mode.mp4");
+            let createVideoLight = d.createElement("video"),
+            createVideoSourceLight = d.createElement("source");
+            createVideoLight.classList.add("background-video");
+            createVideoLight.setAttribute("type","video/mp4");
+            createVideoLight.setAttribute("muted","true");
+            createVideoLight.setAttribute("autoplay","true");
+            createVideoLight.setAttribute("playsinline","true");
+            createVideoLight.setAttribute("alt","video-wallpaper");
+            createVideoLight.setAttribute("src","/assets/video/wallpaper light mode.mp4");
+            $videoContainer.appendChild(createVideoLight);
+            createVideoSourceLight.classList.add("source-video");
+            createVideoSourceLight.setAttribute("type","video/mp4");
+            createVideoSourceLight.setAttribute("type","video/mp4");
+            createVideoSourceLight.setAttribute("muted","true");
+            createVideoSourceLight.setAttribute("autoplay","true");
+            createVideoSourceLight.setAttribute("playsinline","true");
+            createVideoSourceLight.setAttribute("alt","video-wallpaper");
+            createVideoSourceLight.setAttribute("src","/assets/video/wallpaper light mode.mp4");
+            createVideoLight.appendChild(createVideoSourceLight);
             $audio.play();
             $div.style.opacity=0;
             firstTime = true;
