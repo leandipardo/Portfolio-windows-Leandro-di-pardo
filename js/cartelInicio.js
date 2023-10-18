@@ -1,8 +1,9 @@
 const d = document,
 $body = d.querySelector("body");
 let firstTime,
-$div = document.createElement("div"),
-$audio = document.getElementById("audio"),
+$div = d.createElement("div"),
+$audio = d.getElementById("audio"),
+$video =d.querySelector(".background-video"),
 confirmacion=false;
 export default function cartelInicio($apagado){
     $div.classList.add("parrafo-inicio");
@@ -11,15 +12,16 @@ export default function cartelInicio($apagado){
     $body.appendChild($div);
         $div.style.opacity=1;
     d.addEventListener("click",(e)=>{
-        if(e.target.matches($apagado)||e.target.matches(`${$apagado} *`)&&confirmacion===false){
-            d.exitFullscreen();
-            confirmacion=true;
-        }
         if(e.target.matches($apagado)||e.target.matches(`${$apagado} *`)&&confirmacion===true){
-            document.documentElement.requestFullscreen();
+            d.exitFullscreen();
             confirmacion=false;
         }
+        if(e.target.matches($apagado)||e.target.matches(`${$apagado} *`)&&confirmacion===false){
+            document.documentElement.requestFullscreen();
+            confirmacion=true;
+        }
         if (firstTime !== true){
+            $video.setAttribute("src","assets/video/wallpaper light mode.mp4");
             $audio.play();
             $div.style.opacity=0;
             firstTime = true;
@@ -32,13 +34,13 @@ export default function cartelInicio($apagado){
         }
     })
     d.addEventListener("Touch",(e)=>{
-        if(e.target.matches($apagado)||e.target.matches(`${$apagado} *`)&&confirmacion===false){
-            d.exitFullscreen();
-            confirmacion=true;
-        }
         if(e.target.matches($apagado)||e.target.matches(`${$apagado} *`)&&confirmacion===true){
-            document.documentElement.requestFullscreen();
+            d.exitFullscreen();
             confirmacion=false;
+        }
+        if(e.target.matches($apagado)||e.target.matches(`${$apagado} *`)&&confirmacion===false){
+            document.documentElement.requestFullscreen();
+            confirmacion=true;
         }
         if (firstTime !== true){
             $audio.play();
