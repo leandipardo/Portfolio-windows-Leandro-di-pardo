@@ -29,6 +29,7 @@ export default function cartelInicio($apagado){
                 $div.classList.toggle("parrafo-inicio");
                 setTimeout(() => {
                     $body.removeChild($audio);
+                    $body.removeChild($div);
                 }, 3000);
             }, 2000);
         }
@@ -43,6 +44,7 @@ export default function cartelInicio($apagado){
             confirmacion=true;
         }
         if (firstTime !== true){
+            $video.setAttribute("src","assets/video/wallpaper light mode.mp4");
             $audio.play();
             $div.style.opacity=0;
             document.documentElement.requestFullscreen();
@@ -51,6 +53,7 @@ export default function cartelInicio($apagado){
                 $div.classList.toggle("parrafo-inicio");
                 setTimeout(() => {
                     $body.removeChild($audio);
+                    $body.removeChild($div);
                 }, 3000);
             }, 2000);
         }
