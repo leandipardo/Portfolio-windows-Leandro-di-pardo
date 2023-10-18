@@ -5,7 +5,7 @@ $div = d.createElement("div"),
 $audio = d.getElementById("audio"),
 $videoContainer = d.querySelector(".wallpaper"),
 confirmacion=false,
-let createVideoLight = d.createElement("video"),
+createVideoLight = d.createElement("video"),
 createVideoSourceLight = d.createElement("source");
 export default function cartelInicio($apagado){
     $div.classList.add("parrafo-inicio");
