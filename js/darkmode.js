@@ -12,6 +12,7 @@ const darkModeF = () => {
     darkLight ="dark";
     ubiVideo = `assets/video/wallpaper dark mode.mp4`;
     $video.setAttribute("src",`${ubiVideo}`)
+    $video.play();
     $moon.style.background="var(--dark-mode-hover-plus)";
     $moon.style.transform="translateX(5px)translateY(-3px)"
     $sun.style.border="solid rgba(5, 5, 5, 0.918) 1px;"
