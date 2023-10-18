@@ -7,5 +7,6 @@
     "cSpell.ignoreWords": [
         "darkmode",
         "explicacion"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

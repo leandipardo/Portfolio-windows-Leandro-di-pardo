@@ -9,6 +9,7 @@ import darkMode from "./darkmode.js";
 import cartelInicio from "./cartelInicio.js";
 import comportamientoVentanas from "./controlVentana.js";
 import botones from "./botonesVentana.js";
+import chrome from "./chromeBtn.js";
 d.addEventListener("DOMContentLoaded", (e)=>{
     cartelInicio(".apagado");
     menuSlide(".button-menuu",".menu",".ignore",".exe");
@@ -18,6 +19,7 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     explicacion(".button-menu","#texto-ayuda");
     comportamientoVentanas(".portfolio");
     botones("ventana-abierta");
+    chrome(".chromebtn");
 });
 d.addEventListener("mousewheel", (r)=>{
     smartphone(r);
