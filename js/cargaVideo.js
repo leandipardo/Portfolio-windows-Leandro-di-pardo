@@ -12,12 +12,4 @@ export default function cargaVideo(id, mq){
     } 
     breakpoint.addEventListener("change",responsive);
     responsive(breakpoint);
-    bloquearOrientacionRetrato();
 }
-function bloquearOrientacionRetrato() {
-    if (screen.orientation.lock) {
-      screen.orientation.lock('portrait');
-    } else if (screen.lockOrientation) {
-      screen.lockOrientation('portrait');
-    }
-  }

@@ -14,7 +14,7 @@ import chrome from "./chromeBtn.js";
 import cargaVideo from "./cargaVideo.js";
 d.addEventListener("DOMContentLoaded", (e)=>{
     cargaVideo("source-video","(min-width: 720px)");
-    cartelInicio(".apagado","min-width: 1024px","source-video");
+    cartelInicio(".apagado");
     menuSlide(".button-menuu",".menu",".ignore",".exe");
     abrirMenuIzq(".menu-desplegable", ".menu-derecho",".ignore2",".exe2");
     time();
@@ -29,3 +29,11 @@ d.addEventListener("mousewheel", (r)=>{
 })
 console.log('%cGracias por visitar mi portfolio. Espero que te guste lo que ves.🫡', 'background-color:#3e3742;border-radius:40px;margin:20px;padding:10px;font-family: "Segoe UI";font-size:1rem; color: white;');
 darkMode(".darkmode-button");
+function bloquearOrientacionRetrato() {
+    if (screen.orientation.lock) {
+      screen.orientation.lock('portrait');
+    } else if (screen.lockOrientation) {
+      screen.lockOrientation('portrait');
+    }
+  }
+  bloquearOrientacionRetrato();
