@@ -25,7 +25,7 @@ d.addEventListener("click", (e)=>{
             createVideo.classList.add("background-video");
             createVideo.setAttribute("type","video/mp4");
             createVideo.setAttribute("muted","");
-            createVideo.setAttribute("autoplay","autoplay");
+            createVideo.setAttribute("autoplay","");
             createVideo.setAttribute("playsinline","");
             createVideo.setAttribute("alt","video-wallpaper");
             createVideo.setAttribute("src","/assets/video/wallpaper dark mode.mp4");
