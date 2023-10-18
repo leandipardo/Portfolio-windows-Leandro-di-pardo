@@ -23,6 +23,7 @@ export default function cartelInicio($apagado){
             confirmacion=true;
         }
         if (firstTime !== true){
+            $audio.play();
             createVideoLight.classList.add("background-video");
             createVideoLight.setAttribute("type","video/mp4");
             createVideoLight.setAttribute("muted","true");
@@ -40,7 +41,7 @@ export default function cartelInicio($apagado){
             createVideoSourceLight.setAttribute("alt","video-wallpaper");
             createVideoSourceLight.setAttribute("src","/assets/video/wallpaper light mode.mp4");
             createVideoLight.appendChild(createVideoSourceLight);
-            $audio.play();
+            createVideoLight.play();
             $div.style.opacity=0;
             firstTime = true;
             setTimeout(() => {
@@ -62,6 +63,7 @@ export default function cartelInicio($apagado){
             confirmacion=true;
         }
         if (firstTime !== true){
+            $audio.play();
             createVideoLight.classList.add("background-video");
             createVideoLight.setAttribute("type","video/mp4");
             createVideoLight.setAttribute("muted","true");
@@ -79,8 +81,6 @@ export default function cartelInicio($apagado){
             createVideoSourceLight.setAttribute("alt","video-wallpaper");
             createVideoSourceLight.setAttribute("src","/assets/video/wallpaper light mode.mp4");
             createVideoLight.appendChild(createVideoSourceLight);
-            createVideoLight.play();
-            $audio.play();
             $div.style.opacity=0;
             firstTime = true;
             setTimeout(() => {
