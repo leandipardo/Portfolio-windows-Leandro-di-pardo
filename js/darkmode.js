@@ -61,6 +61,7 @@ d.addEventListener("click", (e)=>{
             createVideoSourceLight.setAttribute("autoplay","");
             createVideoSourceLight.setAttribute("playsinline","");
             createVideoSourceLight.setAttribute("alt","video-wallpaper");
+            createVideoSourceLight.setAttribute("src","/assets/video/wallpaper light mode.mp4");
             createVideoLight.appendChild(createVideoSourceLight);
         }
     }
