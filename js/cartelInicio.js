@@ -44,7 +44,25 @@ export default function cartelInicio($apagado){
             confirmacion=true;
         }
         if (firstTime !== true){
-            $video.setAttribute("src","assets/video/wallpaper light mode.mp4");
+            let createVideoLight = d.createElement("video"),
+            createVideoSourceLight = d.createElement("source");
+            createVideo.classList.add("background-vide");
+            createVideo.setAttribute("type","video/mp4");
+            createVideo.setAttribute("muted");
+            createVideo.setAttribute("autoplay");
+            createVideo.setAttribute("playsinline");
+            createVideo.setAttribute("alt","video-wallpaper");
+            createVideo.setAttribute("src","/assets/video/wallpaper light mode.mp4");
+            $videoContainer.appendChild(createVideoLight);
+            createVideoSource.classList.add("source-video");
+            createVideoSource.setAttribute("type","video/mp4");
+            createVideoSource.setAttribute("type","video/mp4");
+            createVideoSource.setAttribute("muted");
+            createVideoSource.setAttribute("autoplay");
+            createVideoSource.setAttribute("playsinline");
+            createVideoSource.setAttribute("alt","video-wallpaper");
+            createVideoSource.setAttribute("src","/assets/video/wallpaper light mode.mp4");
+            createVideoSource.appendChild(createVideoSourceLight);
             $audio.play();
             $div.style.opacity=0;
             firstTime = true;
