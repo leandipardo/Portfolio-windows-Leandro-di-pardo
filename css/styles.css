@@ -403,7 +403,8 @@ body{
   width: 30px;
   height: 30px;
 }
-.mid-menu-container-icons a{
+.mid-menu-container-icons a,
+.extrabtn{
   text-decoration: none;
   cursor: default;
   color: white;
