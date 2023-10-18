@@ -4,7 +4,9 @@ let firstTime,
 $div = d.createElement("div"),
 $audio = d.getElementById("audio"),
 $videoContainer = d.querySelector(".wallpaper"),
-confirmacion=false;
+confirmacion=false,
+let createVideoLight = d.createElement("video"),
+createVideoSourceLight = d.createElement("source");
 export default function cartelInicio($apagado){
     $div.classList.add("parrafo-inicio");
     $div.innerHTML =`
@@ -21,8 +23,6 @@ export default function cartelInicio($apagado){
             confirmacion=true;
         }
         if (firstTime !== true){
-            let createVideoLight = d.createElement("video"),
-            createVideoSourceLight = d.createElement("source");
             createVideoLight.classList.add("background-video");
             createVideoLight.setAttribute("type","video/mp4");
             createVideoLight.setAttribute("muted","true");
@@ -62,8 +62,6 @@ export default function cartelInicio($apagado){
             confirmacion=true;
         }
         if (firstTime !== true){
-            let createVideoLight = d.createElement("video"),
-            createVideoSourceLight = d.createElement("source");
             createVideoLight.classList.add("background-video");
             createVideoLight.setAttribute("type","video/mp4");
             createVideoLight.setAttribute("muted","true");
