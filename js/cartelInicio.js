@@ -22,7 +22,6 @@ export default function cartelInicio($apagado){
         if (firstTime !== true){
             $audio.play();
             $div.style.opacity=0;
-            document.documentElement.requestFullscreen();
             firstTime = true;
             setTimeout(() => {
                 $div.classList.toggle("parrafo-inicio");
@@ -32,7 +31,7 @@ export default function cartelInicio($apagado){
             }, 2000);
         }
     })
-    d.addEventListener("touchstart",(e)=>{
+    d.addEventListener("Touch",(e)=>{
         if(e.target.matches($apagado)||e.target.matches(`${$apagado} *`)&&confirmacion===false){
             d.exitFullscreen();
             confirmacion=true;
