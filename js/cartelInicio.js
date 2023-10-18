@@ -1,5 +1,5 @@
 const d = document,
-$body = d.querySelector(".classDark");
+$body = d.querySelector("body");
 let firstTime,
 $div = document.createElement("div"),
 $audio = document.getElementById("audio"),
