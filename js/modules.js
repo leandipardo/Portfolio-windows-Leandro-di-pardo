@@ -29,11 +29,3 @@ d.addEventListener("mousewheel", (r)=>{
 })
 console.log('%cGracias por visitar mi portfolio. Espero que te guste lo que ves.🫡', 'background-color:#3e3742;border-radius:40px;margin:20px;padding:10px;font-family: "Segoe UI";font-size:1rem; color: white;');
 darkMode(".darkmode-button");
-function bloquearOrientacionRetrato() {
-    if (screen.orientation.lock) {
-      screen.orientation.lock('portrait');
-    } else if (screen.lockOrientation) {
-      screen.lockOrientation('portrait');
-    }
-  }
-  bloquearOrientacionRetrato();
