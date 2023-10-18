@@ -62,7 +62,7 @@ d.addEventListener("click", (e)=>{
             createVideoSourceLight.setAttribute("playsinline","");
             createVideoSourceLight.setAttribute("alt","video-wallpaper");
             createVideoLight.appendChild(createVideoSourceLight);
-            cargaVideo("source-video","(min-width: 700px)");
+            cargaVideo("source-video","(min-width: 720px)");
         }
     }
 })

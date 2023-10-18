@@ -8,7 +8,6 @@ export default function cargaVideo(id, mq){
             source.setAttribute("src","/assets/video/wallpaper light mode.mp4");
         }else{
             source.setAttribute("src","/assets/video/wallpaper light mobile.mp4");
-            source.classList.add("mobile");
         }
     } 
     breakpoint.addEventListener("change",responsive);
