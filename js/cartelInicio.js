@@ -66,7 +66,7 @@ export default function cartelInicio($apagado){
         if (firstTime !== true){
             let createVideoLight = d.createElement("video"),
             createVideoSourceLight = d.createElement("source");
-            createVideo.classList.add("background-vide");
+            createVideo.classList.add("background-video");
             createVideo.setAttribute("type","video/mp4");
             createVideo.setAttribute("muted");
             createVideo.setAttribute("autoplay");
