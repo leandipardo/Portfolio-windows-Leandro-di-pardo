@@ -47,7 +47,6 @@ export default function cartelInicio($apagado){
             $video.setAttribute("src","assets/video/wallpaper light mode.mp4");
             $audio.play();
             $div.style.opacity=0;
-            document.documentElement.requestFullscreen();
             firstTime = true;
             setTimeout(() => {
                 $div.classList.toggle("parrafo-inicio");
