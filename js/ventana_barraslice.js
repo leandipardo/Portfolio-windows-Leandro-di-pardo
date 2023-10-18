@@ -8,9 +8,9 @@ d.addEventListener("mouseup",(e)=>{
     $b.style.width=`${(cuenta)}%`;
 });
 d.addEventListener("touchmove",(e)=>{
+    cuenta = Math.round(Math.abs(($v.clientWidth - $v.scrollLeft / $v.clientWidth) - $v.clientWidth))*25;
     setTimeout(() => {
-        cuenta = Math.round(Math.abs(($v.clientWidth - $v.scrollLeft / $v.clientWidth) - $v.clientWidth))*25;
         $b.style.width=`${(cuenta)}%`;
-    }, 1);
+    }, 100);
 });
 }
