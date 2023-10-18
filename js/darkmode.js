@@ -28,7 +28,6 @@ d.addEventListener("click", (e)=>{
             createVideo.setAttribute("autoplay","");
             createVideo.setAttribute("playsinline","");
             createVideo.setAttribute("alt","video-wallpaper");
-            createVideo.setAttribute("src","/assets/video/wallpaper dark mode.mp4");
             $videoContainer.appendChild(createVideo);
             createVideoSource.classList.add("source-video");
             createVideoSource.setAttribute("type","video/mp4");
@@ -38,6 +37,7 @@ d.addEventListener("click", (e)=>{
             createVideoSource.setAttribute("alt","video-wallpaper");
             createVideoSource.setAttribute("src","/assets/video/wallpaper dark mode.mp4");
             createVideo.appendChild(createVideoSource);
+            createVideo.setAttribute("src","/assets/video/wallpaper dark mode.mp4");
         }else if(darkLight === "dark"){
             darkLight ="light";
             $moon.style.background ="rgba(255, 255, 255, 0.918)";
