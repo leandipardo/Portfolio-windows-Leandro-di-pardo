@@ -35,9 +35,8 @@ d.addEventListener("click", (e)=>{
             createVideoSource.setAttribute("autoplay","");
             createVideoSource.setAttribute("playsinline","");
             createVideoSource.setAttribute("alt","video-wallpaper");
-            createVideoSource.setAttribute("src","/assets/video/wallpaper dark mode.mp4");
             createVideo.appendChild(createVideoSource);
-            createVideo.setAttribute("src","/assets/video/wallpaper dark mode.mp4");
+            cargaVideo("source-video","(min-width: 720px)","dark");
         }else if(darkLight === "dark"){
             darkLight ="light";
             $moon.style.background ="rgba(255, 255, 255, 0.918)";
@@ -63,7 +62,7 @@ d.addEventListener("click", (e)=>{
             createVideoSourceLight.setAttribute("playsinline","");
             createVideoSourceLight.setAttribute("alt","video-wallpaper");
             createVideoLight.appendChild(createVideoSourceLight);
-            cargaVideo("source-video","(min-width: 720px)");
+            cargaVideo("source-video","(min-width: 720px)","light");
         }
     }
 })

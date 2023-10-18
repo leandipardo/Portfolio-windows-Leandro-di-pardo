@@ -13,7 +13,7 @@ import botones from "./botonesVentana.js";
 import chrome from "./chromeBtn.js";
 import cargaVideo from "./cargaVideo.js";
 d.addEventListener("DOMContentLoaded", (e)=>{
-    cargaVideo("source-video","(min-width: 720px)");
+    cargaVideo("source-video","(min-width: 720px)","light");
     cartelInicio(".apagado");
     menuSlide(".button-menuu",".menu",".ignore",".exe");
     abrirMenuIzq(".menu-desplegable", ".menu-derecho",".ignore2",".exe2");

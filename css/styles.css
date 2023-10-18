@@ -85,6 +85,11 @@ body{
   height: var(--height);
   object-fit: var(--object-fit);
 }
+.mobile{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 .blur{
   display: hidden;
   position:absolute;
