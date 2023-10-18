@@ -257,7 +257,7 @@ body{
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  transition:.4s ease-in;
+  transition: transform .4s ease-in;
 }
 .title-darkmode{
   grid-row: 2 / 2;
