@@ -5,6 +5,7 @@ let $themeBtn = d.querySelector(".darkmode-button"),
 $video = d.querySelector(".background-video"),
 $moon = d.querySelector(".moon"),
 $sun = d.querySelector(".sun"),
+$source = d.querySelector(".source-video"),
 ubiVideo,
 $body = d.querySelector("body"),
 darkLight="light";
@@ -13,6 +14,7 @@ function darkModeF(){
     $video.setAttribute("autoplay",`false`);
     ubiVideo = `assets/video/wallpaper dark mode.mp4`;
     $video.setAttribute("src",`${ubiVideo}`);
+    $source.setAttribute("src",`${ubiVideo}`);
     $video.setAttribute("autoplay",`true`);
     $moon.style.background="var(--dark-mode-hover-plus)";
     $moon.style.transform="translateX(5px)translateY(-3px)"
@@ -24,6 +26,7 @@ function lightModeF(){
     darkLight ="light";
     ubiVideo = `assets/video/wallpaper light mode.mp4`;
     $video.setAttribute("src",`${ubiVideo}`)
+    $source.setAttribute("src",`${ubiVideo}`);
     $moon.style.background ="rgba(255, 255, 255, 0.918)";
     $moon.style.transform = "translateX(0px)translateY(0px)";
     $sun.style.border="solid white 1px;"
