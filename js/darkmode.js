@@ -1,11 +1,9 @@
 const d = document;
 import cargaVideo from "./cargaVideo.js";
-//Detecta boton, que modo esta y cambia video a respectivo modo.
 export default function darkMode(btn){
 let $themeBtn = d.querySelector(".darkmode-button"),
 $moon = d.querySelector(".moon"),
 $sun = d.querySelector(".sun"),
-w = window,
 $body = d.querySelector("body"),
 darkLight="light";
 d.addEventListener("click", (e)=>{
@@ -63,8 +61,8 @@ d.addEventListener("click", (e)=>{
             createVideoSourceLight.setAttribute("autoplay","");
             createVideoSourceLight.setAttribute("playsinline","");
             createVideoSourceLight.setAttribute("alt","video-wallpaper");
-            cargaVideo("source-video","(min-width: 1024px)");
             createVideoLight.appendChild(createVideoSourceLight);
+            cargaVideo("source-video","(min-width: 720px)");
         }
     }
 })
