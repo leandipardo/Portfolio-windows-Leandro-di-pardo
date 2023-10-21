@@ -610,7 +610,7 @@ body{
   position: absolute;
   width: 35vw;
   min-width: 350px;
-  height: 90dvh;
+  height: 50dvh;
   top: 1px;
   left: 1px;
   z-index: 1;

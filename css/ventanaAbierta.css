@@ -1,8 +1,9 @@
-/* VENTANA CONTENIDO */
+/* VENTANA PORTFOLIO CONTENIDO */
 .va-main{
     position: relative;
     height: fit-content;
     width: 100%;
+    color: var(--dark-mode-font);
   }
   .va-title{
     position: relative;
@@ -25,7 +26,6 @@
     margin-right: 5%;
   }
   .va-info{
-    color: var(--dark-mode-font);
     position: relative;
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
@@ -186,7 +186,6 @@
     flex-grow: 1;
     width: 100%;
     height: fit-content;
-    color: var(--dark-mode-font);
     font-size: calc(1em + 1dvw);
     font-weight:300;
     text-align: center;
@@ -214,8 +213,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--dark-mode-font);
     border-radius: 10px;
+    color: var(--dark-mode-font);
     transition: .5s ease;
     z-index: 1;
     text-decoration: none;
@@ -254,3 +253,15 @@
     border-radius: 20px;
   }
   
+/* ESTE DISPOSITIVO CONTENIDO */
+.di-main{
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  color: var(--dark-mode-font);
+  padding: 1.5rem;
+}
+.di-main h3{
+  text-align: center;
+  font-size: 2rem;
+}

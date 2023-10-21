@@ -1,9 +1,7 @@
 const d =  document,
 $body = d.querySelector("body");
 let transformX,
-transformY,
-ttransformX,
-ttransformY;
+transformY;
 const buscarPadre = (e, clase) =>{
     let p = e.target;
     while(!p.className.includes(clase)){
@@ -104,8 +102,6 @@ export default function botones(v){
                         $contenedorElemento.removeChild(elemento);
                         transformX = undefined;
                         transformY = undefined;
-                        ttransformX = undefined;
-                        ttransformY = undefined;
                     }, 250);
                 }
             })

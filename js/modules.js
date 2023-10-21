@@ -20,7 +20,7 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     time();
     sepia(".sepia-button");
     explicacion(".button-menu","#texto-ayuda");
-    comportamientoVentanas(".portfolio");
+    comportamientoVentanas(".portfolio",".dispositivos");
     botones("ventana-abierta");
     chrome(".chromebtn");
 });
