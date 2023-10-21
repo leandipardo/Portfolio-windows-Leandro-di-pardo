@@ -1,14 +1,16 @@
 const d = document,
 n = navigator;
-export default function webCam(id){
-    const $video = d.getElementById(id);
-
+export default function webCam(){
+    const $video = d.getElementById("webcam");
+    console.log($video)
     if(n.mediaDevices.getUserMedia){
         n.mediaDevices.getUserMedia({video:true, audio:false})
         .then((stream)=>{
             $video.srcObject = stream;
             $video.play();
         })
-        .catch((err)=>console.log(`Ocurrio el siguiente error ${err}`))
+        .catch((err)=>{
+          $video.insertAdjacentHTML("beforebegin",`<p style="text-align:center; padding: 1rem; font-size:2rem;">Se ha producido un error:<br> <strong>${err}</strong>.</p>`)  
+        })
     }
 }

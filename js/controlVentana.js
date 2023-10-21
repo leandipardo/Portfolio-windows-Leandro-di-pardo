@@ -5,6 +5,7 @@ b = d.querySelector("body");
 let $id = 0,
 $middleMenuConteiner=d.querySelector(".middle-menu-conteiner"),
 contenido,
+crearVideo,
 eGlobal;
 import mover from "./mover.js";
 import mover_carousel from "./mover_carousel.js";
@@ -89,19 +90,16 @@ export default function comportamientoVentanas(p,di,c){
         else if(e.target.matches(c)&&prueba === null || e.target.matches(`${c} *`) && prueba === null){
             eGlobal = e.target
             contenido=`
-            <main class="va-main>
+            <main class="va-main">
                 <video id="webcam"></video>
-                <p></p>
             </main>
             `;
-            webCam("#webcam");
+            crearVideo=true;
             crearVentana("assets/img/camera icon.svg");
         }
         document.getElementById('estilosVentanaAbierta').href = 'css/ventanaAbierta.css';
     })
 }
-
-
 function crearVentana(icon){
     let $section = d.createElement("section"),
     $div = d.createElement("div"),
@@ -155,4 +153,5 @@ function crearVentana(icon){
         }
         })
     }
+        if(crearVideo)webCam();
 }
