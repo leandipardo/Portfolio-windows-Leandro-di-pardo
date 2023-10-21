@@ -53,15 +53,14 @@ export default function userDeviceInfo(id) {
   } else if (isDesktop.any()) {
     info.dispositivo = isDesktop.any().toString();
   }
-
   if (isBrowser.any()) {
     info.navegador = `${isBrowser.any()}`;
   }
 }
 w.addEventListener("online", () => {
-  info.red(); // Actualiza la propiedad red de info cuando el estado de red cambia a en línea.
+  info.red();
 });
 
 w.addEventListener("offline", () => {
-  info.red(); // Actualiza la propiedad red de info cuando el estado de red cambia a desconectado.
+  info.red();
 });

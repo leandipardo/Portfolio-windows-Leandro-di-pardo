@@ -265,3 +265,11 @@
   text-align: center;
   font-size: 2rem;
 }
+.di-ul{
+  list-style-type: none;
+}
+
+/* CAMARA WEB */
+#webcam{
+  object-fit: cover;
+}

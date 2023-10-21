@@ -10,17 +10,17 @@ import mover from "./mover.js";
 import mover_carousel from "./mover_carousel.js";
 import barraSlice from "./ventana_barraslice.js";
 import userDeviceInfo,{info} from "./deteccion_dispositivo.js";
-export default function comportamientoVentanas(p,di){
+import webCam from "./deteccion_webcam.js";
+export default function comportamientoVentanas(p,di,c){
     d.addEventListener("click", (e)=>{
         let prueba = d.querySelector(".ventana-abierta");
         if(e.target.matches(p) && prueba === null || e.target.matches(`${p} *`) && prueba === null ){
-            document.getElementById('estilosVentanaAbierta').href = 'css/ventanaAbierta.css';
             eGlobal = e.target;
             contenido =`
-            <div class="va-main">
+            <main class="va-main">
                 <section class="va-title">
                     <h2>Leandro <br> Di Pardo.</h2>
-                    <p>Desarrollador front end.</p>
+                    <p>Desarrollador front-end.</p>
                 </section>
                 <section class="va-info">
                     <div class="va-info-div">
@@ -28,7 +28,7 @@ export default function comportamientoVentanas(p,di){
                         <p>Me llamo Leandro, soy argentino y tengo 27 años, actualmente estoy estudiando Licenciatura en Sistemas. Tengo experiencia en trabajos de diseño gráfico y también estudié programación web de manera autodidacta. Mi objetivo es seguir creciendo como desarrollador, ampliando constantemente mis habilidades con nuevas tecnologías y lenguajes.</p>
                     </div>
                     <div class="va-wave-div">
-                        <img src="assets/img/wave.svg" alt="estadisticas random">
+                        <img src="assets/img/wave.svg" alt="estadísticas random">
                     </div>
                     <div class="va-tecnologia-div">
                         <h3>Habilidades.</h3>
@@ -48,7 +48,7 @@ export default function comportamientoVentanas(p,di){
                                 <h3>Por otro lado, mis hard skills se basan en HTML, CSS, JavaScript, Bootstrap, Sass y React. Utilizo Git para el versionado. Tengo conocimientos de SEO, diseño responsive y accesibilidad. Se utilizar programas de la suite de Adobe, Figma y Linux. Hablo inglés a nivel medio y conozco las distintas metodologías Scrum.</h3>
                             </div>
                             <div class="va-tecnologia-four">
-                                <h3>Mis objetivos a futuro son costear mis estudios a medida que gane experiencia en el area del front, tengo la capacidad de aprender rápidamente y estoy dispuesto a ponerme al día con las tecnologias que me indiquen lo antes posible.</h3>
+                                <h3>Mis objetivos a futuro son costear mis estudios a medida que gane experiencia en el área del front, tengo la capacidad de aprender rápidamente y estoy dispuesto a ponerme al día con las tecnologias que me indiquen lo antes posible.</h3>
                             </div>
                             <div class="va-tecnologia-five">
                                 <h3>Gracias por tu tiempo.</h3>
@@ -66,25 +66,38 @@ export default function comportamientoVentanas(p,di){
                         </a>
                 </section>
                 <img class="va-wave" src="/assets/img/va-wave.svg" alt="wave">
-            </div>
+            </main>
             `;
             crearVentana("assets/img/pdf icon.svg");
             mover_carousel('.va-tecnologia-texto');
             barraSlice();
         }else if(e.target.matches(di) && prueba === null || e.target.matches(`${di} *`) && prueba === null ){
             eGlobal = e.target;
-            document.getElementById('estilosVentanaAbierta').href = 'css/ventanaAbierta.css';
-            userDeviceInfo("dimain");
+            userDeviceInfo();
             contenido= `
             <main id="dimain" class="di-main">
                 <h3>Este dispositivo</h3>
-                <p>Sistema operativo: <strong>${info.dispositivo}.</strong></p>
-                <p>Navegador: <strong>${info.navegador}.</strong></p>
-                <p>Resolucion: <strong>${info.resolucion}.</strong></p>
-                <p>Estado de la conexión: ${info.red()}.</p>
+                <ul class="di-ul">
+                    <li>Sistema operativo: <strong>${info.dispositivo}</strong>.</li>
+                    <li>Navegador: <strong>${info.navegador}</strong>.</li>
+                    <li>Resolucion: <strong>${info.resolucion}.</strong></li>
+                    <li>Estado de la conexión: ${info.red()}.</li>
+                </ul>
             </main>`;
             crearVentana("assets/img/icons8-dispositivo-80.svg");
         }
+        else if(e.target.matches(c)&&prueba === null || e.target.matches(`${c} *`) && prueba === null){
+            eGlobal = e.target
+            contenido=`
+            <main class="va-main>
+                <video id="webcam"></video>
+                <p></p>
+            </main>
+            `;
+            webCam("#webcam");
+            crearVentana("assets/img/camera icon.svg");
+        }
+        document.getElementById('estilosVentanaAbierta').href = 'css/ventanaAbierta.css';
     })
 }
 
