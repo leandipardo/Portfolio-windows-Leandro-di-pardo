@@ -260,12 +260,15 @@
   width: 100%;
   color: var(--dark-mode-font);
   padding: 1.5rem;
+  display: flex;
+  flex-flow: column nowrap;
 }
 .di-main h3{
-  text-align: center;
-  font-size: 2rem;
+  align-self: center;
+  font-size: 4rem;
 }
 .di-ul{
+  font-size: 2rem;
   list-style-type: none;
 }
 
@@ -273,4 +276,5 @@
 #webcam{
   width: 100%;
   height: auto;
+  border-radius: 50%;
 }

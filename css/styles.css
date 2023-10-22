@@ -383,7 +383,7 @@ body{
 }
 .mid-menu-container-icons div{
   width: 65px;
-  padding: 10px 10px 0 10px;
+  padding: 5px 10px;
   height: fit-content;
   display: flex;
   flex-flow: column nowrap;
