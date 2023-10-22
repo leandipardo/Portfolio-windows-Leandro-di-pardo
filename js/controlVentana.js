@@ -83,7 +83,6 @@ export default function comportamientoVentanas(p,di,c){
                     <li>Navegador: <strong>${info.navegador}</strong>.</li>
                     <li>Resolucion: <strong>${info.resolucion}.</strong></li>
                     <li>Estado de la conexión: ${info.red()}.</li>
-                    <iframe id="mapa"></iframe>
                 </ul>
             </main>`;
             crearVentana("assets/img/icons8-dispositivo-80.svg");

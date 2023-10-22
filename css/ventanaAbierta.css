@@ -13,7 +13,6 @@
     justify-content: baseline;
     align-items: flex-end;
     overflow-y: hidden;
-    color: var(--dark-mode-font);
   }
   .va-title h2{
     font-size: calc(3em + 1dvw);
@@ -258,23 +257,40 @@
   position: relative;
   height: fit-content;
   width: 100%;
+  height: calc(100% - 30px);
+  margin: 15px;
   color: var(--dark-mode-font);
-  padding: 1.5rem;
   display: flex;
   flex-flow: column nowrap;
+  text-align: center;
+  background-image: url(/assets/img/back\ dispositivos.svg);
+  background-size: 100vw;
+  background-position-y:bottom;
+  background-size: cover;
+  animation: di-bg-animation 50s linear 0s infinite alternate;
+}
+@keyframes di-bg-animation {
+  from{
+    background-position: 0px;
+  }to{
+    background-position: 1000px;
+  }
 }
 .di-main h3{
-  align-self: center;
-  font-size: 4rem;
+  font-size: calc(1vw + 2em);
+  margin-left: 5%;
 }
 .di-ul{
-  font-size: 2rem;
+  padding: 0;
+  font-size: calc(1em + 0.5vw);
   list-style-type: none;
+  font-size: clamp(12px, 24px, 36px);
+  -webkit-margin-bottom-collapse: red;
 }
 
 /* CAMARA WEB */
 #webcam{
   width: 100%;
-  height: auto;
-  border-radius: 50%;
+  height: 50vh;
+  border-radius: 15px;
 }

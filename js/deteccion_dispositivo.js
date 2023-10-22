@@ -50,7 +50,6 @@ export default function userDeviceInfo(id) {
 
   if (isMobile.any()) {
     info.dispositivo = isMobile.any().toString();
-    obtenerUbicacion();
   } else if (isDesktop.any()) {
     info.dispositivo = isDesktop.any().toString();
   }
@@ -65,19 +64,3 @@ w.addEventListener("online", () => {
 w.addEventListener("offline", () => {
   info.red();
 });
-function obtenerUbicacion() {
-  if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(mostrarUbicacion);
-  } else {
-      alert("La geolocalización no está disponible en tu navegador.");
-  }
-}
-function mostrarUbicacion(posicion) {
-  const latitud = posicion.coords.latitude;
-  const longitud = posicion.coords.longitude;
-
-  const mapaURL = `https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d${latitud}!2d${longitud}`;
-
-  const iframe = document.getElementById("mapa");
-  iframe.src = mapaURL;
-}
