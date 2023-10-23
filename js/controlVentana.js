@@ -84,8 +84,10 @@ export default function comportamientoVentanas(p,di,c){
                     <li>Resolucion: <strong>${info.resolucion}.</strong></li>
                     <li>Estado de la conexión: ${info.red()}.</li>
                 </ul>
+                <img class="di-img" src="/assets/img/back dispositivos.svg"></img>
             </main>`;
             crearVentana("assets/img/icons8-dispositivo-80.svg");
+            cambiosExtras();
         }
         else if(e.target.matches(c)&&prueba === null || e.target.matches(`${c} *`) && prueba === null){
             eGlobal = e.target
@@ -96,6 +98,7 @@ export default function comportamientoVentanas(p,di,c){
             `;
             crearVideo=true;
             crearVentana("assets/img/camera icon.svg");
+            cambiosExtras();
         }
         document.getElementById('estilosVentanaAbierta').href = 'css/ventanaAbierta.css';
     })
@@ -154,4 +157,8 @@ function crearVentana(icon){
         })
     }
         if(crearVideo)webCam();
+}
+function cambiosExtras(){
+    let v = d.querySelector(".ventana-abierta");
+    v.classList.add("bg");
 }

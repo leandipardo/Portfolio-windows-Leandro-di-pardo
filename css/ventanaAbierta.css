@@ -255,39 +255,48 @@
 /* ESTE DISPOSITIVO CONTENIDO */
 .di-main{
   position: relative;
-  height: fit-content;
   width: 100%;
-  height: calc(100% - 30px);
-  margin: 15px;
+  height: calc(100% - 24px);
   color: var(--dark-mode-font);
   display: flex;
   flex-flow: column nowrap;
   text-align: center;
-  background-image: url(/assets/img/back\ dispositivos.svg);
+  align-content: space-between;
+  overflow: hidden;
+  margin: 0 0 24px 24px;
+  border-radius: 0 0 15px 15px;
+  /* background-image: url(/assets/img/back\ dispositivos.svg);
   background-size: 100vw;
   background-position-y:bottom;
   background-size: cover;
-  animation: di-bg-animation 50s linear 0s infinite alternate;
-}
-@keyframes di-bg-animation {
-  from{
-    background-position: 0px;
-  }to{
-    background-position: 1000px;
-  }
+  animation: di-bg-animation 50s linear 0s infinite alternate; */
 }
 .di-main h3{
   font-size: calc(1vw + 2em);
-  margin-left: 5%;
 }
 .di-ul{
   padding: 0;
   font-size: calc(1em + 0.5vw);
   list-style-type: none;
-  font-size: clamp(12px, 24px, 36px);
   -webkit-margin-bottom-collapse: red;
 }
-
+.di-img{
+  position: absolute;
+  bottom: 0px;
+  transform: translateY(20%);
+  width: 125%;
+  left: 0;
+  animation: di-img-translate 20s ease-out 0s infinite alternate;
+  z-index: -1;
+}
+@keyframes di-img-translate {
+  from{
+    left: -5%;
+  }to{
+    left: -20%;
+  }
+  
+}
 /* CAMARA WEB */
 #webcam{
   width: 100%;
