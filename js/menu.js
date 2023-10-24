@@ -16,7 +16,10 @@ d.addEventListener("click",(e)=> {
     d.querySelector($menu).classList.add("menu-translate");
   }
   if(e.target.matches($midtranslate)||e.target.matches(`${$midtranslate} *`)){
-    d.querySelector($midSectionContainer).classList.toggle("mid-translate");
+    let padre = d.querySelector($midSectionContainer),
+    hijo = d.querySelectorAll(".translate-newsapps");
+    padre.classList.toggle("mid-translate");
+    hijo.forEach((e) => e.classList.toggle("newsapps-transform"));
   }
 })
 }
