@@ -27,7 +27,7 @@ p{
 .classLight{
   --dark-mode-main:hsl(210, 61%, 93%);
   --dark-mode-main-transparecy: hsla(210, 61%, 93%, 0.871);
-  --dark-mode-border:hsl(216, 11%, 74%);
+  --dark-mode-border:none;
   --dark-mode-hover:hsla(0, 0%, 54%, 0.178);
   --dark-mode-hover-plus:hsl(0, 0%, 54%);
   --dark-mode-search:hsl(0, 0%, 100%);
@@ -48,6 +48,7 @@ body{
   width: 100vw;
   overflow: hidden;
   transition: filter 1s ease;
+  user-select:none;
 }
           /* FONDO DE PANTALLA */
 .parrafo-inicio{
@@ -63,7 +64,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  transition:opacity .5s ease;
+  transition: opacity .5s ease;
   opacity: 0;
 }
 .wallpaper{
@@ -100,7 +101,6 @@ body{
   transition: backdrop-filter .5s ease;
 }
           /* BARRA DE TAREAS */
-
 .barra-de-tareas {
   position: absolute;
   height: 45px;
@@ -129,12 +129,14 @@ body{
   border-radius: 2px;
   animation: crearVentana .5s ease 0s 1 ;
   animation-play-state: running;
+  transform:scale(1);
+  transition: transform .10s, background-color .5s ease;
 }
 .button-menu:hover{
   background-color: var(--dark-mode-hover);
 }
 .button-menu:active{
-  transform: scale(.8);
+  transform: scale(.7);
 }
           /* MENU LATERAL */
 .menu-desplegable-conteiner{
@@ -147,6 +149,7 @@ body{
   align-items: center;
   border-radius: 15%;
   padding: 0 5px;
+  transition: background-color .5s ease;
 }
 .menu-desplegable-conteiner:hover{
   background-color: var(--dark-mode-hover);
@@ -176,9 +179,6 @@ body{
   border-radius: 15%;
   padding: 0 5px;
 }
-.clock:hover{
-  background-color: var(--dark-mode-hover);
-}
 .clock p{
   font-size: smaller;
   margin:0;
@@ -196,7 +196,7 @@ body{
   z-index: 10;
   background-color: var(--dark-mode-main-transparecy);
   backdrop-filter: blur(25px);
-  transition: transform .35s ease;
+  transition: .35s ease-in;
   border:solid 1px var(--dark-mode-border);
   box-shadow: 0px 6px 23px -9px rgba(0,0,0,0.75);
   border-radius: 10px;
@@ -290,7 +290,7 @@ body{
   z-index: 10;
   background-color: var(--dark-mode-main-transparecy);
   backdrop-filter: blur(25px);
-  transition: transform .35s ease-in;
+  transition: .35s ease-in;
   border-radius: 10px;
   border:solid 1px var(--dark-mode-border);
   box-shadow: 0px 6px 23px -9px rgba(0,0,0,0.75);
@@ -322,6 +322,7 @@ body{
   font-size: .7rem;
   height: 25px;
   color: var(--dark-mode-font);
+  user-select:auto;
   outline: none;
 }
 .search-menu:active{
@@ -356,7 +357,6 @@ body{
 .text-menu-container :nth-child(2){
   font-size: small;
   padding: 5px;
-  background-color:var(--dark-mode-hover);
   border-radius: 5px;
   font-weight: 400;
 }
@@ -365,11 +365,25 @@ body{
 }
 
 /* Zona media */
+.mid-section-container{
+  position: relative;
+  width: 200%;
+  display: flex;
+  flex-flow: row nowrap;
+  transition: transform .5s ease;
+}
+#midMenuTranslate:hover{
+  transition: .5s ease;
+  background-color:var(--dark-mode-hover);
+}
+.mid-translate{
+  transform: translateX(-50%);
+}
 .mid-menu-container-icons{
   height: calc(60% - 75px);
   position: relative;
-  margin: 0 5%;
-  width: auto;
+  margin: 0 2%;
+  width: 50%;
   display: flex;
   flex-flow:row wrap;
   justify-content: flex-start;
@@ -392,6 +406,9 @@ body{
   border-radius: 5px;
   font-size: smaller;
   text-align: center;
+  user-select:none;
+  transition: .5s ease;
+  transition: height .5s .5s ease-in;
 }
 .mid-menu-container-icons div img:active{
   transform: scale(.8);
@@ -421,7 +438,13 @@ body{
 #camara div img,
 #dispositivos img{
   filter:var(--filter);
-
+}
+.elements-filter{
+  transition: opacity 1s ease, visibility 2s, display 2s;
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+  order: 2;
 }
 /* Anteultima zona */
 .recomendaciones-menu{
@@ -430,7 +453,11 @@ body{
   width: 90%;
   margin: auto 5%;
 }
-
+.mid-menu-container-news{
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
 /* Zona inferior menu */
 .bottom-menu-container{
  position: relative;
@@ -460,7 +487,7 @@ body{
   margin-left: 30px;
   margin-right: 1rem;
   border-radius: 50%;
-  animation: backgroundPhoto 3s ease 1s infinite alternate forwards;
+  animation: backgroundPhoto 2s ease .5s infinite alternate forwards;
   background-color: var(--dark-mode-hover);
   animation-play-state: running;
   transition:  .6s  .3s ease;
@@ -471,8 +498,7 @@ body{
   background-color: var(--dark-mode-main-transparecy);
 }
 @keyframes backgroundPhoto {
-  0%{
-  }100%{
+  to{
     box-shadow: -0px -0px 139px -38px rgba(0,0,0,0.49) inset;
     -webkit-box-shadow: -0px -0px 139px -38px rgba(0,0,0,0.49) inset;
     -moz-box-shadow: -0px -0px 139px -38px rgba(0,0,0,0.49) inset;
@@ -619,12 +645,13 @@ body{
   top: 1px;
   left: 1px;
   z-index: 1;
-  outline: solid 1px var(--dark-mode-border);
-  background-color: var(--ventana-cuerpo);
-  backdrop-filter: blur(5px);
+  border: solid 1px var(--dark-mode-border);
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, var(--ventana-cuerpo) 35px, var(--ventana-cuerpo) 35px, rgba(47,46,46,0) 35px);
   border-radius: 3px 3px 0 0;
   animation: crearVentana .5s ease 0s 1 ;
   animation-play-state: running;
+  cursor: grab;
 }
 .ventana-abierta::-webkit-scrollbar{
   display: none;
@@ -645,6 +672,7 @@ width: fit-content;
 left: calc(100% - 105px);
 filter: grayscale(1);
 z-index: 5;
+transition: 5s ease;
 }
 .window-buttons input{
 position: sticky;
@@ -656,13 +684,14 @@ height: 35px;
 width: 35px;
 filter: grayscale(1)brightness(1.5);
 display: flex;
+justify-content: space-around;
 border: none;
 background-color: transparent;
 color: var(--dark-mode-font);
 z-index: 5;
 }
 .window-buttons input:hover{
-background-color: var(--dark-mode-hover);
+background-color: rgba(95, 95, 95, 0.212);
 }
 .window-buttons input:active{
 transform: scale(.8);
@@ -671,19 +700,30 @@ transform: scale(.8);
   position: relative;   
   width: 100%;
   z-index: 1;
-  outline: solid 1px var(--dark-mode-border);
   border-radius: 0 0 5px 5px;
   box-shadow: 10px 10px 23px -9px rgb(0, 0, 0);
   -webkit-box-shadow: 0px 6px 23px -9px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 6px 23px -9px rgba(0,0,0,0.75);
+  background-color: var(--ventana-cuerpo);
+  backdrop-filter: blur(12.5px);
   overflow-y: scroll;
   overflow-x: hidden;
   height: calc(100% - 35px);
   display: flex;
   bottom: 0;
+  cursor: default;
+  animation: windowOpen .5s ease-out 0s 1;
+}
+@keyframes windowOpen {
+  from{
+  filter: blur(30px);
+  }to{
+  filter: blur(0);
+}
 }
 .ventana-cuerpo::-webkit-scrollbar{
   visibility: hidden;
+  display: none;
 }
 .ventana-cuerpo::-webkit-scrollbar-corner{
   visibility: hidden;
@@ -706,6 +746,7 @@ transform: scale(.8);
   z-index: 4;
 }
 .bg{
+  backdrop-filter: blur(30px);
   background-color: unset;
 }
           /*MEDIAQUERYS */

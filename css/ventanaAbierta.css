@@ -4,6 +4,7 @@
     height: fit-content;
     width: 100%;
     color: var(--dark-mode-font);
+    margin-bottom: 15px;
   }
   .va-title{
     position: relative;
@@ -30,7 +31,7 @@
     grid-template-columns: 33.3% 33.3% 33.3%;
     grid-template-rows: 1fr .25fr 1fr .1fr .1fr .1fr ;
     padding: 5%;
-    gap: 2.5%;
+    row-gap: 2.5%;
   }
   .va-info-div{
     grid-column: 1 / 4;
@@ -125,6 +126,7 @@
   }
   .va-tecnologia-texto::-webkit-scrollbar {
     visibility: hidden;
+    display: none;
   }
   .va-progress-bar{
     width: 45px;
@@ -246,8 +248,8 @@
     position: absolute;
     bottom: 0;
     left: 15px;
-    width: calc(100%-15px);
-    height: auto;
+    margin-right: 15px;
+    width: calc(100%-30px);
     z-index: 0;
     border-radius: 20px;
   }
@@ -262,6 +264,7 @@
   flex-flow: column nowrap;
   text-align: center;
   align-content: space-between;
+  justify-content:space-around;
   overflow: hidden;
   margin: 0 0 24px 24px;
   border-radius: 0 0 15px 15px;
@@ -279,6 +282,7 @@
   font-size: calc(1em + 0.5vw);
   list-style-type: none;
   -webkit-margin-bottom-collapse: red;
+  margin-bottom: 30%;
 }
 .di-img{
   position: absolute;
@@ -298,6 +302,12 @@
   
 }
 /* CAMARA WEB */
+.flex{
+  display: flex;
+  flex-flow:column nowrap;
+  justify-content: center;
+  align-items: center;
+}
 #webcam{
   width: 100%;
   height: 50vh;

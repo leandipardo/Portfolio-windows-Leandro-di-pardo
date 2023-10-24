@@ -2,7 +2,6 @@ const d = document,
 n = navigator;
 export default function webCam(){
     const $video = d.getElementById("webcam");
-    console.log($video)
     if(n.mediaDevices.getUserMedia){
         n.mediaDevices.getUserMedia({video:true, audio:false})
         .then((stream)=>{

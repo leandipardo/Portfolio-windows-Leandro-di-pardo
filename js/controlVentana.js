@@ -1,11 +1,9 @@
 const d = document,
-w = window,
-n = navigator,
 b = d.querySelector("body");
 let $id = 0,
 $middleMenuConteiner=d.querySelector(".middle-menu-conteiner"),
 contenido,
-crearVideo,
+crearVideo = undefined,
 eGlobal;
 import mover from "./mover.js";
 import mover_carousel from "./mover_carousel.js";
@@ -92,7 +90,7 @@ export default function comportamientoVentanas(p,di,c){
         else if(e.target.matches(c)&&prueba === null || e.target.matches(`${c} *`) && prueba === null){
             eGlobal = e.target
             contenido=`
-            <main class="va-main">
+            <main class="va-main flex">
                 <video id="webcam"></video>
             </main>
             `;
@@ -159,6 +157,6 @@ function crearVentana(icon){
         if(crearVideo)webCam();
 }
 function cambiosExtras(){
-    let v = d.querySelector(".ventana-abierta");
+    let v = d.querySelector(".ventana-cuerpo");
     v.classList.add("bg");
 }
