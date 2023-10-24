@@ -13,6 +13,7 @@ import webCam from "./deteccion_webcam.js";
 export default function comportamientoVentanas(p,di,c){
     d.addEventListener("click", (e)=>{
         let prueba = d.querySelector(".ventana-abierta");
+        crearVideo=false;
         if(e.target.matches(p) && prueba === null || e.target.matches(`${p} *`) && prueba === null ){
             eGlobal = e.target;
             contenido =`
