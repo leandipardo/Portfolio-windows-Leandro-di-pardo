@@ -733,7 +733,7 @@ transform: scale(.8);
   top:0;
   left:0;
   width: 100vw;
-  height: calc(100vh - 45px);
+  height: calc(100dvh - 45px);
   transition: .5s ease;
 }
 .minimizar-ventana{
