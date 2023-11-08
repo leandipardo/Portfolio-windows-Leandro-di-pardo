@@ -82,21 +82,14 @@ export default function comportamientoVentanas(p,di,c){
                     <li>Navegador: <strong>${info.navegador}</strong>.</li>
                     <li>Resolucion: <strong>${info.resolucion}.</strong></li>
                     <li>Estado de la conexión: ${info.red()}.</li>
-                </ul>
+                    <section class="di-cam">
+                    <img src="/assets/img/camera icon.svg" alt="camera icon">
+                    </section>
+                    </ul>
                 <img class="di-img" src="/assets/img/back dispositivos.svg"></img>
             </main>`;
-            crearVentana("assets/img/icons8-dispositivo-80.svg");
-            cambiosExtras();
-        }
-        else if(e.target.matches(c)&&prueba === null || e.target.matches(`${c} *`) && prueba === null){
-            eGlobal = e.target
-            contenido=`
-            <main class="va-main flex">
-                <video id="webcam"></video>
-            </main>
-            `;
             crearVideo=true;
-            crearVentana("assets/img/camera icon.svg");
+            crearVentana("assets/img/icons8-dispositivo-80.svg");
             cambiosExtras();
         }
         document.getElementById('estilosVentanaAbierta').href = 'css/ventanaAbierta.css';

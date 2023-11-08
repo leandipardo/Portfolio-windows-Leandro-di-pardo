@@ -12,7 +12,6 @@ export default function mover(caja){
     }
     d.addEventListener("mousemove", moveMouse);
     d.addEventListener("mousedown", (e) => {
-        e.preventDefault();
         clearInterval(inter);
         if (e.target.matches(caja)) {
             let objeto = e.target;
