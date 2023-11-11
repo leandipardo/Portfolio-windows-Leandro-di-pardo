@@ -6,7 +6,7 @@ export default function mover(caja){
     const element = d.querySelectorAll(caja); //selecciona .movible
     const moveMouse = (e) => {
             element.forEach(el => { 
-            el.dataset.mouseX = e.clientX;
+            el.dataset.mouseX = e.clientX; 
             el.dataset.mouseY = e.clientY;
         });
     }
