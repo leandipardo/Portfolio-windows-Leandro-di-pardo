@@ -13,7 +13,8 @@ d.addEventListener("touchmove",(e)=>{
         barraProgreso($b,cuenta);
     }, 500);
 });
+    el.style.width=`${param}%`; 
 }
 function barraProgreso(el,param){
-    el.style.width=`${param}%`
+    el.style.width=`${param}%`; 
 }
