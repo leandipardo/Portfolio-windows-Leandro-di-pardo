@@ -5,12 +5,13 @@ $b = d.querySelector(".va-progres-point"),
 cuenta;
 d.addEventListener("mouseup",(e)=>{
     cuenta = Math.round(Math.abs(($v.clientWidth - $v.scrollLeft / $v.clientWidth) - $v.clientWidth))*25;
-    $b.style.width=`${(cuenta)}%`;
+    barraProgreso($b,cuenta);
 });
 d.addEventListener("touchmove",(e)=>{
     cuenta = Math.round(Math.abs(($v.clientWidth - $v.scrollLeft / $v.clientWidth) - $v.clientWidth))*25;
-    setTimeout(() => {
-        $b.style.width=`${(cuenta)}%`;
-    }, 100);
+    barraProgreso($b,cuenta);
 });
+}
+function barraProgreso(el,param){
+    el.style.width=`${param}%`
 }
