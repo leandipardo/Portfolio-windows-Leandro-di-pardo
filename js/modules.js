@@ -12,6 +12,7 @@ import comportamientoVentanas from "./controlVentana.js";
 import botones from "./botonesVentana.js";
 import chrome from "./chromeBtn.js";
 import cargaVideo from "./cargaVideo.js";
+import traducir from "./traduccion.js";
 d.addEventListener("DOMContentLoaded", (e)=>{
     cargaVideo("source-video","(min-width: 720px)","light");
     cartelInicio(".apagado");
@@ -19,13 +20,14 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     abrirMenuIzq(".menu-desplegable", ".menu-derecho",".ignore2",".exe2");
     time();
     sepia(".sepia-button");
+    darkMode(".darkmode-button");
     explicacion(".button-menu","#texto-ayuda");
     comportamientoVentanas(".portfolio","#dispositivos","#camara");
     botones("ventana-abierta");
     chrome(".chromebtn");
+    traducir();
 });
 d.addEventListener("mousewheel", (r)=>{
     smartphone(r);
 })
 console.log('%cGracias por visitar mi portfolio. Espero que te guste lo que ves.🫡', 'background-color:#3e3742;border-radius:40px;margin:20px;padding:10px;font-family: "Segoe UI";font-size:1rem; color: white;');
-darkMode(".darkmode-button");

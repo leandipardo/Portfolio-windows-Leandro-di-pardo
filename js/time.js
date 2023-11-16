@@ -4,8 +4,10 @@ $h = d.querySelector(".hour");
 //Agrega fecha y hora abajo a la derecha.
 export default function time(){
     setInterval(() => {
-        let reloj = new Date();
+        let reloj = new Date(),
+        hora = reloj.toLocaleTimeString().split(":"),
+        horad= hora.pop();
         $f.textContent = reloj.toLocaleDateString();
-        $h.textContent = reloj.toLocaleTimeString(); 
-    }, 16);
+        $h.textContent = hora.join(":");
+    }, 1000);
 }

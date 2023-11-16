@@ -53,14 +53,11 @@ export default function botones(v){
             setTimeout(() => {
                 padre.classList.remove("transition");
             }, 250);
-            
         }if(padre.className.includes("minimizar-ventana")){}else{
             padre.classList.add("transition");
             padre.classList.toggle("minimizar-ventana");
             transformX = 0;
             transformY = 0;
-
-
             padre.style.transform=``;
             setTimeout(() => {
                 padre.classList.remove("transition");

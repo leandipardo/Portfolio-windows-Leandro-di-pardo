@@ -211,12 +211,31 @@ body{
 }
 
 /* botones del menu */
-.sepia-button{
-  grid-row: 1 / 2;
-  grid-column: 1 / 2;
+.sepia-button,
+.darkmode-button,
+.leguaje-button{
   background-color: var(--dark-mode-hover);
   border: solid 1px var(--dark-mode-border);
   border-radius: 10px;
+  transition: transform .5s ease;
+}
+.sepia-button:hover,
+.darkmode-button:hover,
+.leguaje-button:hover{
+  transform:scale(.9);
+  
+}
+.title-darkmode,
+.title-filtro,
+.title-lenguaje{
+  justify-self:center;
+  font-size: 1rem;
+  cursor: default;
+  text-align: center;
+}
+.sepia-button{
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
 }
 
 .sepia-button svg{
@@ -237,16 +256,10 @@ body{
 .title-filtro{
   grid-row: 2 / 2;
   grid-column: 1 / 2;
-  justify-self:center;
-  font-size: 1rem;
-  cursor: default;
 }
 .darkmode-button{
   grid-row: 1 / 2;
   grid-column: 2 / 3;
-  background-color: var(--dark-mode-hover);
-  border: solid 1px var(--dark-mode-border);
-  border-radius: 10px;
 }
 .sun{
   position: relative;
@@ -267,10 +280,34 @@ body{
 .title-darkmode{
   grid-row: 2 / 2;
   grid-column: 2 / 3;
-  justify-self:center;
-  font-size: 1rem;
-  cursor: default;
+}
+.leguaje-button{
+  grid-row: 1 / 2;
+  grid-column: 3 / 3;
+}
+.lenguaje-button-text{
+  font-family: cursive;
   text-align: center;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+}
+.rotate-btn{
+  animation: lenguajebtn 1s ease 0s 1 alternate-reverse;
+  animation-play-state: running;
+}
+@keyframes lenguajebtn {
+  0%{
+    transform: rotatez(0deg)scale(1);
+  }50%{
+    transform: rotatez(-15deg)scale(1.1);
+  }100%{
+    transform: rotatez(280deg)scale(.1);
+  }
+}
+.title-lenguaje{
+  grid-row: 2 / 2;
+  grid-column: 3 / 3;
 }
 .background-buttons{
   background-color: var(--dark-mode-hover-plus);
@@ -403,15 +440,15 @@ body{
   transform: translateX(-50%);
 }
 .mid-menu-container-icons{
+  position: relative;
   height: calc(60% - 75px);
   position: relative;
   margin: 0 2%;
   width: 50%;
   display: flex;
   flex-flow:row wrap;
-  justify-content: flex-start;
-  align-items: baseline;
-  align-content: stretch;
+  justify-content:start;
+  align-content: flex-start;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -431,7 +468,6 @@ body{
   text-align: center;
   user-select:none;
   transition: .5s ease;
-  transition: height .5s .5s ease-in;
 }
 .mid-menu-container-icons div img:active{
   transform: scale(.8);

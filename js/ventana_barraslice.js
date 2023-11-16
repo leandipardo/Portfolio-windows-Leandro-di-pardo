@@ -9,11 +9,14 @@ d.addEventListener("mouseup",(e)=>{
 });
 d.addEventListener("touchmove",(e)=>{
     cuenta = Math.round(Math.abs(($v.clientWidth - $v.scrollLeft / $v.clientWidth) - $v.clientWidth))*25;
+    $b.style.width=`${cuenta}%`; 
+});
+d.addEventListener("touchstart",(e)=>{
     setTimeout(() => {
         barraProgreso($b,cuenta);
     }, 500);
-});
-    el.style.width=`${param}%`; 
+})
+    $b.style.width=`${cuenta}%`; 
 }
 function barraProgreso(el,param){
     el.style.width=`${param}%`; 

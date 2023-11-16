@@ -10,6 +10,7 @@ import mover_carousel from "./mover_carousel.js";
 import barraSlice from "./ventana_barraslice.js";
 import userDeviceInfo,{info} from "./deteccion_dispositivo.js";
 import webCam from "./deteccion_webcam.js";
+import { cambioIdioma } from "./traduccion.js";
 export default function comportamientoVentanas(p,di,c){
     d.addEventListener("click", (e)=>{
         let prueba = d.querySelector(".ventana-abierta");
@@ -20,38 +21,38 @@ export default function comportamientoVentanas(p,di,c){
             <main class="va-main">
                 <section class="va-title">
                     <h2>Leandro <br> Di Pardo.</h2>
-                    <p>Desarrollador front-end.</p>
+                    <p data-lenguaje="Front-end developer." data-lenguaje-español="Desarrollador front-end.">Desarrollador front-end.</p>
                 </section>
                 <section class="va-info">
                     <div class="va-info-div">
-                        <h2>Hola!👋🏻</h2>
-                        <p>Me llamo Leandro, soy argentino y tengo 27 años, actualmente estoy estudiando Licenciatura en Sistemas. Tengo experiencia en trabajos de diseño gráfico y también estudié programación web de manera autodidacta. Mi objetivo es seguir creciendo como desarrollador, ampliando constantemente mis habilidades con nuevas tecnologías y lenguajes.</p>
+                        <h2 data-lenguaje="Hi!👋🏻" data-lenguaje-español="Hola!👋🏻">Hola!👋🏻</h2>
+                        <p data-lenguaje="My name is Leandro, I'm Argentine, and I'm 27 years old. Currently, I'm studying a Bachelor's degree in Systems. I have experience in graphic design jobs, and I've also self-taught web programming. My goal is to continue growing as a developer, constantly expanding my skills with new technologies and languages." data-lenguaje-español="Me llamo Leandro, soy argentino y tengo 27 años, actualmente estoy estudiando Licenciatura en Sistemas. Tengo experiencia en trabajos de diseño gráfico y también estudié programación web de manera autodidacta. Mi objetivo es seguir creciendo como desarrollador, ampliando constantemente mis habilidades con nuevas tecnologías y lenguajes.">Me llamo Leandro, soy argentino y tengo 27 años, actualmente estoy estudiando Licenciatura en Sistemas. Tengo experiencia en trabajos de diseño gráfico y también estudié programación web de manera autodidacta. Mi objetivo es seguir creciendo como desarrollador, ampliando constantemente mis habilidades con nuevas tecnologías y lenguajes.</p>
                     </div>
                     <div class="va-wave-div">
                         <img src="assets/img/wave.svg" alt="estadísticas random">
                     </div>
                     <div class="va-tecnologia-div">
-                        <h3>Habilidades.</h3>
+                        <h3 data-lenguaje="Skills." data-lenguaje-español="Habilidades.">Habilidades.</h3>
                     </div>
                     <section class="va-tecnologia-texto">
                             <div class="va-progress-bar">
                                 <div class="va-progres-point"></div>
                             </div>
                             <div class="va-tecnologia-first">   
-                                <p>Desliza para saber más. →</p>
-                                <h3>Como desarrollador web junior sumado a mis experiencias en diseño grafico, he adquirido un considerable conjunto de habilidades en diversas tecnologías para la creación de sitios web.</h3>
+                                <p class="desliza" data-lenguaje="Swipe to see more." data-lenguaje-español="Desliza para ver más. →">Desliza para ver más. →</p>
+                                <p data-lenguaje="As a junior web developer, coupled with my experiences in graphic design, I have acquired a substantial set of skills in various technologies for website creation." data-lenguaje-español="Como desarrollador web junior sumado a mis experiencias en diseño grafico, he adquirido un considerable conjunto de habilidades en diversas tecnologías para la creación de sitios web.">Como desarrollador web junior sumado a mis experiencias en diseño grafico, he adquirido un considerable conjunto de habilidades en diversas tecnologías para la creación de sitios web.</p>
                             </div>
                             <div class="va-tecnologia-second">
-                                <h3>Mis soft skills se basan en la comunicación clara, resolución de problemas, autogestión, trabajo en equipo y adaptación al cambio. Además, soy responsable, organizado en la gestión del tiempo, atento a los detalles, creativo y estoy en constante aprendizaje.</h3>
+                                <p data-lenguaje="My soft skills are grounded in clear communication, problem-solving, self-management, teamwork, and adaptability to change. Additionally, I am responsible, organized in time management, detail-oriented, creative, and committed to continuous learning." data-lenguaje-español="Mis soft skills se basan en la comunicación clara, resolución de problemas, autogestión, trabajo en equipo y adaptación al cambio. Además, soy responsable, organizado en la gestión del tiempo, atento a los detalles, creativo y estoy en constante aprendizaje.">Mis soft skills se basan en la comunicación clara, resolución de problemas, autogestión, trabajo en equipo y adaptación al cambio. Además, soy responsable, organizado en la gestión del tiempo, atento a los detalles, creativo y estoy en constante aprendizaje.</p>
                             </div>
                             <div class="va-tecnologia-third">
-                                <h3>Por otro lado, mis hard skills se basan en HTML, CSS, JavaScript, Bootstrap, Sass y React. Utilizo Git para el versionado. Tengo conocimientos de SEO, diseño responsive y accesibilidad. Se utilizar programas de la suite de Adobe, Figma y Linux. Hablo inglés a nivel medio y conozco las distintas metodologías Scrum.</h3>
+                                <p data-lenguaje="On the other hand, my hard skills are rooted in HTML, CSS, JavaScript, Bootstrap, Sass, and React. I use Git for version control. I have knowledge of SEO, responsive design, and accessibility. I am proficient in using Adobe suite programs, Figma, and Linux. I speak English at a intermediate level and am familiar with various Scrum methodologies." data-lenguaje-español="Por otro lado, mis hard skills se basan en HTML, CSS, JavaScript, Bootstrap, Sass y React. Utilizo Git para el versionado. Tengo conocimientos de SEO, diseño responsive y accesibilidad. Se utilizar programas de la suite de Adobe, Figma y Linux. Hablo inglés a nivel medio y conozco las distintas metodologías Scrum.">Por otro lado, mis hard skills se basan en HTML, CSS, JavaScript, Bootstrap, Sass y React. Utilizo Git para el versionado. Tengo conocimientos de SEO, diseño responsive y accesibilidad. Se utilizar programas de la suite de Adobe, Figma y Linux. Hablo inglés a nivel medio y conozco las distintas metodologías Scrum.</p>
                             </div>
                             <div class="va-tecnologia-four">
-                                <h3>Mis objetivos a futuro son costear mis estudios a medida que gane experiencia en el área del front, tengo la capacidad de aprender rápidamente y estoy dispuesto a ponerme al día con las tecnologias que me indiquen lo antes posible.</h3>
+                                <p data-lenguaje="My future goals include funding my studies as I gain experience in the front-end area. I have the ability to learn quickly and am willing to catch up with any technologies as soon as possible." data-lenguaje-español="Mis objetivos a futuro son costear mis estudios a medida que gane experiencia en el área del front, tengo la capacidad de aprender rápidamente y estoy dispuesto a ponerme al día con las tecnologias que me indiquen lo antes posible.">Mis objetivos a futuro son costear mis estudios a medida que gane experiencia en el área del front, tengo la capacidad de aprender rápidamente y estoy dispuesto a ponerme al día con las tecnologias que me indiquen lo antes posible.</p>
                             </div>
                             <div class="va-tecnologia-five">
-                                <h3>Gracias por tu tiempo.</h3>
+                                <p data-lenguaje="Thank you for your time." data-lenguaje-español="Gracias por tu tiempo.">Gracias por tu tiempo.</p>
                             </div>
                     </section>
                     <div class="va-contacto-background"></div>
@@ -76,7 +77,7 @@ export default function comportamientoVentanas(p,di,c){
             userDeviceInfo();
             contenido= `
             <main id="dimain" class="di-main">
-                <h3>Este dispositivo</h3>
+                <h3 data-lenguaje="This device">Este dispositivo</h3>
                 <ul class="di-ul">
                     <li>Sistema operativo: <strong>${info.dispositivo}</strong>.</li>
                     <li>Navegador: <strong>${info.navegador}</strong>.</li>
@@ -134,6 +135,7 @@ function crearVentana(icon){
     $id++;
     $middleMenuConteiner.appendChild($iconimg);
     $div2.innerHTML=contenido; 
+    cambioIdioma();
     if (window.outerWidth <= 1024){
         $section.classList.toggle("movible");
         $section.classList.add("maximizar-ventana");
