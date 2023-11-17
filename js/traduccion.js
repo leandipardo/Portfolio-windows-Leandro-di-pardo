@@ -19,15 +19,18 @@ export function cambioIdioma(){
         $creados = [...$nl];
         $input.placeholder="Search for applications, settings, and documents.";
         $el.forEach(e=>{
+            if($creados.includes(e)=== false)e.setAttribute("data-lenguaje-español",`${e.textContent}`);
             let traduccion = e.getAttribute("data-lenguaje");
-            if(!$creados.includes(e))e.setAttribute("data-lenguaje-español",`${e.textContent}`);
             e.textContent=traduccion;
         })
     }else if(lenguaje === "español"){
         let $el=d.querySelectorAll("[data-lenguaje]"),
+        $nl = d.querySelectorAll("[data-lenguaje-español]"),
+        $creados = [...$nl],
         $input = d.querySelector("#menu-search");
         $input.placeholder="Buscar aplicaciones, configuraciones y documentos.";
         $el.forEach(e=>{
+            if($creados.includes(e)=== false)e.setAttribute("data-lenguaje-español",`${e.textContent}`);
             let traduccion = e.getAttribute("data-lenguaje-español");
             e.textContent=traduccion;
         })
