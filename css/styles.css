@@ -554,7 +554,8 @@ background-color: red;
   animation: backgroundPhoto 2s ease .5s infinite alternate forwards;
   background-color: var(--dark-mode-hover);
   animation-play-state: running;
-  transition:  .6s  .3s ease;
+  transition:  height .6s  .3s ease,width .6s  .3s ease, .25s linear;
+  z-index: 10;
 }
 .foto-perfil:hover{
   height: 5rem;
@@ -585,9 +586,20 @@ background-color: red;
   height: fit-content;
   width: max-content;
 }
+#texto-ayuda::after{
+  content: "|";
+  animation: textarea 1s ease 1s infinite alternate-reverse;
+}
+@keyframes textarea {
+  60%{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
 .cuadro-ayuda p{
   width: 100%;
-  transition: 2s ease;
+  transition: 1s ease;
   cursor: default;
   margin-top: 0;
   margin-left: 0;
@@ -829,7 +841,6 @@ transform: scale(.8);
   }
   .cuadro-ayuda{
     width: 70%;
-    height: 3rem;
   }
   .bottom-menu-container{
     height: 7rem;

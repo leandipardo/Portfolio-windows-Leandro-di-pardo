@@ -66,7 +66,7 @@
     width: 200%;
     scale: 2;
     left: 50%;
-    animation: vaWaves 15s ease 0s infinite alternate backwards;
+    animation: vaWaves 60s linear 0s infinite alternate backwards;
     animation-play-state: running;
   }
   .va-wave-div >img:hover{
@@ -91,7 +91,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     overflow: hidden;
     border-radius: 10px;
     cursor: default;
@@ -99,7 +99,6 @@
   }
   .va-tecnologia-div h3{
     position: relative;
-    width: 100%;
     color: var(--dark-mode-search);
     font-size: calc(1.5em + 1vw);
     font-weight: 300;

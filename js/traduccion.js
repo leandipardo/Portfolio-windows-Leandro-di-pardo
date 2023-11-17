@@ -8,7 +8,6 @@ export default function traducir(){
             cambioIdioma();
         }
     })
-
 }
 export function cambioIdioma(){
     $btn.classList.add("rotate-btn");

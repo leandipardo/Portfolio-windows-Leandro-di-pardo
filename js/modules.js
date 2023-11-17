@@ -21,7 +21,7 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     time();
     sepia(".sepia-button");
     darkMode(".darkmode-button");
-    explicacion(".button-menu","#texto-ayuda");
+    explicacion("#texto-ayuda");
     comportamientoVentanas(".portfolio","#dispositivos","#camara");
     botones("ventana-abierta");
     chrome(".chromebtn");
