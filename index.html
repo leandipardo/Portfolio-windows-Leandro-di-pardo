@@ -15,6 +15,7 @@
   </head>
   <body scrolling="no" class="classDark classLight">
     <audio id="audio" src="assets/resources/SnapSave.io - OFFICIAL Windows 11 Startup Sound (128 kbps).mp3"></audio>
+    <audio id="audio_notif" src="assets/resources/Windows Notify System Generic.wav"></audio>
         <nav class="menu-derecho menu-translate">
           <div class="sepia-button ignore2">
             <svg class="sepiaAnimation sepiaBtn ignore2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -29,6 +30,10 @@
           <p class="title-darkmode" data-lenguaje="Dark or light mode.">Modo claro u oscuro.</p>
           <div class="leguaje-button ignore2"><p class="lenguaje-button-text ignore2"data-lenguaje="es"">en</p></div>
           <p class="title-lenguaje" data-lenguaje="Translate to spanish.">Traducir a ingles.</p>
+          <input type="range" id="barraBrillo" class="input-bar ignore2" name="barraInput" min="20" max="100" value="100">
+          <p class="title-brillo ignore2" data-lenguaje="Brightness">Brillo</p>
+          <input type="range" id="barraVolumen" class="input-bar ignore2" name="barraInput" min="20" max="100" value="50">
+          <p class="title-volume ignore2" data-lenguaje="Volume">Volumen</p>
         </nav>
         <nav class="menu menu-translate ignore">
           <section class="top-menu-container">

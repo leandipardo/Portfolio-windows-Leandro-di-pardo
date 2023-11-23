@@ -3,7 +3,7 @@ w=window;
 import menuSlide from "./menu.js";
 import smartphone from "./smartphone.js";
 import explicacion from "./explicacion.js";
-import time from "./time.js";
+import time, { intervaloTiempo } from "./time.js";
 import abrirMenuIzq from "./menu_desplegable.js";
 import sepia from "./sepia.js";
 import darkMode from "./darkmode.js";
@@ -13,12 +13,14 @@ import botones from "./botonesVentana.js";
 import chrome from "./chromeBtn.js";
 import cargaVideo from "./cargaVideo.js";
 import traducir from "./traduccion.js";
+import brillo, { volumen } from "./brillo_volumen.js";
 d.addEventListener("DOMContentLoaded", (e)=>{
     cargaVideo("source-video","(min-width: 720px)","light");
     cartelInicio(".apagado");
     menuSlide(".button-menuu",".menu",".ignore",".exe","#midMenuTranslate",".mid-section-container");
     abrirMenuIzq(".menu-desplegable", ".menu-derecho",".ignore2",".exe2");
     time();
+    intervaloTiempo();
     sepia(".sepia-button");
     darkMode(".darkmode-button");
     explicacion("#texto-ayuda");
@@ -26,6 +28,8 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     botones("ventana-abierta");
     chrome(".chromebtn");
     traducir();
+    brillo();
+    volumen();
 });
 d.addEventListener("mousewheel", (r)=>{
     smartphone(r);

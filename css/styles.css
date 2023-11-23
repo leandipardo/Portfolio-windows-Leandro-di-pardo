@@ -10,12 +10,13 @@ p{
   --dark-mode-main-transparecy: hsla(0, 20%, 16%, 0.871);
   --dark-mode-border:hsl(330, 1%, 27%);
   --dark-mode-hover:hsla(0, 1%, 38%, 0.253);
-  --dark-mode-hover-plus:rgb(98, 96, 96);
+  --dark-mode-hover-plus:#3a3441;
   --dark-mode-search:hsl(0, 0%, 13%);
   --dark-mode-contrast: hsla(271, 58%, 86%, 0.688);
   --dark-mode-font:white;
   --dark-mode-bottom-menu:hsla(0, 0%, 0%, 0.205);
   --dark-mode-background:black;
+  --dark-mode-input:red;
   --ventana-cuerpo:rgba(0, 0, 0, 0.781);
   --transparencia-inicio:hsla(0, 20%, 16%, 0.932);
   --box-shadow:14px 14px 20px #0f0f0ffa, -14px -14px 20px #080808da;
@@ -35,6 +36,7 @@ p{
   --dark-mode-font:hsl(0, 0%, 0%);
   --dark-mode-bottom-menu:hsla(203, 10%, 75%, 0.205);
   --dark-mode-background:white;
+  --dark-mode-input:white;
   --ventana-cuerpo:rgba(255, 255, 255, 0.781);
   --transparencia-inicio:hsla(210, 61%, 93%, 0.932);
   --box-shadow:14px 14px 20px #cbced1, -14px -14px 20px white;
@@ -204,13 +206,17 @@ body{
   -moz-box-shadow: 0px 6px 23px -9px rgba(0,0,0,0.75);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr .5fr 1fr .5fr .5fr .5fr;
+  grid-template-rows: 1fr .5fr .5fr .5fr .5fr .5fr;
   gap: 0 10px;
   padding: 10px;
   visibility: visible;
+
 }
 
 /* botones del menu */
+.menu-derecho p{
+  text-align: center;
+}
 .sepia-button,
 .darkmode-button,
 .leguaje-button{
@@ -231,7 +237,6 @@ body{
   justify-self:center;
   font-size: 1rem;
   cursor: default;
-  text-align: center;
 }
 .sepia-button{
   grid-row: 1 / 2;
@@ -287,7 +292,6 @@ body{
 }
 .lenguaje-button-text{
   font-family: cursive;
-  text-align: center;
   font-size: 1.5rem;
   font-weight: bolder;
   color: white;
@@ -308,6 +312,26 @@ body{
 .title-lenguaje{
   grid-row: 2 / 2;
   grid-column: 3 / 3;
+}
+#barraBrillo{
+  grid-row: 3 / 4;
+  grid-column: 1 / 4;
+}
+.input-bar{
+  width: 80%;
+  justify-self: center;
+}
+.title-brillo{
+  grid-row: 4 / 4;
+  grid-column: 1 / 4;
+}
+#barraVolumen{
+  grid-row: 5 / 5;
+  grid-column: 1 / 4;
+}
+.title-volume{
+  grid-row: 6 / 6;
+  grid-column: 1 / 4;
 }
 .background-buttons{
   background-color: var(--dark-mode-hover-plus);
