@@ -1,3 +1,4 @@
+import brillo from "./brillo_volumen.js";
 let d = document,
 $buttonIco=d.querySelector(".sepiaBtn"),
 $btn=d.querySelector(".sepia-button");
@@ -8,6 +9,7 @@ export default function sepia(btn){
             document.body.classList.toggle("sepia-efect");
             $buttonIco.classList.toggle("sepiaAnimation");
             $btn.classList.toggle("background-buttons");
+            brillo();
         }
     })
 }

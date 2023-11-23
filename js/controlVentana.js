@@ -56,7 +56,7 @@ export default function comportamientoVentanas(p,di,c){
                             </div>
                     </section>
                     <div class="va-contacto-background"></div>
-                    <a class="va-whatsapp-div"target="_blank" href="https://api.whatsapp.com/send/?phone=5492346415486&text=Hola,%20mi%20nombre%20es%20____%20y%20queria%20ponerme%20en%20contacto%20con%20vos.">
+                    <a class="va-whatsapp-div"target="_blank" href="https://api.whatsapp.com/send/?phone=5492346415486&text=Hola,%20fui%20redirigido%20desde%20el%20portfolio.">
                             <h3>Whatsapp</h3>
                         </a>
                         <a class="va-github-div" target="_blank" href="https://github.com/leandipardo">
@@ -66,7 +66,7 @@ export default function comportamientoVentanas(p,di,c){
                             <h3>Linkedin</h3>
                         </a>
                 </section>
-                <img class="va-wave" src="/assets/img/va-wave.svg" alt="wave">
+                <img class="va-background-main" src="assets/img/background portfolio black.svg" alt="imagen de fondo de decoracion protfolio">
             </main>
             `;
             crearVentana("assets/img/pdf icon.svg");

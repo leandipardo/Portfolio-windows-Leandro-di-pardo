@@ -3,8 +3,9 @@ $volumen = document.querySelector("#barraVolumen"),
 $audioNotif = document.getElementById("audio_notif"),
 $body = document.querySelector("body");
 export default function brillo(){
+    ($body.className.includes("sepia-efect"))?$body.style.filter=`brightness(${$brillo.value}%)sepia(.5)` :$body.style.filter=`brightness(${$brillo.value}%)`;
     $brillo.addEventListener("input", function() {
-        $body.style.filter=`brightness(${$brillo.value}%)`;
+        ($body.className.includes("sepia-efect"))?$body.style.filter=`brightness(${$brillo.value}%)sepia(.5)` :$body.style.filter=`brightness(${$brillo.value}%)`;
     });
 }
 export function volumen(){
