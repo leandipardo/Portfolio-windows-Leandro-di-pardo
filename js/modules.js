@@ -12,11 +12,13 @@ import comportamientoVentanas from "./controlVentana.js";
 import botones from "./botonesVentana.js";
 import chrome from "./chromeBtn.js";
 import cargaVideo from "./cargaVideo.js";
-import traducir from "./traduccion.js";
+import traducir, { isEnglish } from "./traduccion.js";
 import brillo, { volumen } from "./brillo_volumen.js";
 d.addEventListener("DOMContentLoaded", (e)=>{
+
     cargaVideo("source-video","(min-width: 720px)","light");
     cartelInicio(".apagado");
+    isEnglish();
     menuSlide(".button-menuu",".menu",".ignore",".exe","#midMenuTranslate",".mid-section-container");
     abrirMenuIzq(".menu-desplegable", ".menu-derecho",".ignore2",".exe2");
     time();
@@ -30,8 +32,10 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     traducir();
     brillo();
     volumen();
+
 });
 d.addEventListener("mousewheel", (r)=>{
     smartphone(r);
 })
+
 console.log('%cGracias por visitar mi portfolio. Espero que te guste lo que ves.🫡', 'background-color:#3e3742;border-radius:40px;margin:20px;padding:10px;font-family: "Segoe UI";font-size:1rem; color: white;');

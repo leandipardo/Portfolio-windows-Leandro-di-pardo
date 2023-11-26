@@ -342,10 +342,10 @@ body{
   display:flex;
   flex-flow: column nowrap;
   width: 33.3vw;
-  height:auto;
   bottom: 0;
   left: 33.3vw;
-  min-height: 50vh;
+  min-height: 50dvh;
+  max-height: 80dvh;
   margin-bottom: 50px;
   overflow: hidden;
   z-index: 10;
@@ -400,7 +400,7 @@ body{
   border-radius: 25px 0 0 25px;
   border: solid 1px 1px 1px 0 var(--dark-mode-border);
   background-color: var(--dark-mode-search);
-  height: 27px;
+  height: 25px;
   width: 27px;
 }
 .top-menu-container input{
@@ -442,7 +442,7 @@ body{
   transform: translateX(-1rem);
 }
 .newsapps-transform{
-  transform: translateX(-6em);
+  transform: translateX(-5.5em);
 }
 .text-menu-container *{
   cursor:default;
@@ -539,13 +539,71 @@ body{
 .mid-menu-container-noticias{
   position: relative;
   width: 50%;
-  height: 50%;
+  height: 50dvh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
-.iconos{
-width: 30%;
-height: 100%;
-background-color: red;
+.mid-menu-container-noticias::-webkit-scrollbar{
+  display: none;
 }
+.new{
+  width: 85%;
+  padding: 0 5%;
+  height: max-content;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 1%;
+  background-color: var(--dark-mode-main-transparecy);
+  opacity: .7;
+  transition: opacity 2s ease,box-shadow .25s ease;
+}
+.new:hover{
+  opacity: 1;
+  box-shadow: 0 0 25px 0px var(--dark-mode-contrast) inset;
+  -webkit-box-shadow: 0 0 25px 0px var(--dark-mode-contrast) inset;
+  -moz-box-shadow: 0 0 25px 0px var(--dark-mode-contrast) inset;
+}
+.new a{
+  all: initial;
+  position: relative;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  color: var(--dark-mode-font);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.new a img{
+  min-width: 30%;
+  max-width: 40%;
+  height: max-content;
+}
+.new-text-container h3{
+  font-size: 1em;
+  align-self: center;
+}
+.new-text-container p{
+  margin: 10px 0;
+}
+/* .a h3{
+  grid-row: 0 / 0;
+  grid-column: 0 / 2;
+  font-weight: bold;
+  color:var(--dark-mode-font);
+  text-decoration: none;
+  font-size: 1em;
+}
+.new-p-conteiner{
+  width: 70%;
+  height: 3em;
+}
+.new-text p{
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
 /* Zona inferior menu */
 .bottom-menu-container{
  position: relative;
@@ -605,7 +663,7 @@ background-color: red;
 }
 #texto-ayuda{
   cursor: pointer;
-  color: var(--dark-mode-contrast);
+  color: #005cc8;
   font-weight: 700;
   height: fit-content;
   width: max-content;

@@ -9,6 +9,15 @@ export default function traducir(){
         }
     })
 }
+export function isEnglish(){
+    if(navigator.language === "en"){
+        lenguaje ="ingles";
+        console.log("e")
+        cambioIdioma();
+    }
+
+}
+console.log(navigator.language)
 export function cambioIdioma(){
     $btn.classList.add("rotate-btn");
     if(lenguaje === "ingles"){

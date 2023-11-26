@@ -9,13 +9,14 @@ englishText =["","This website will be updated with future projects","If somethi
 emptyArr =[],
 i = 0,
 count= 0;
-//Texto de informacion al lado de imagen de perfil, cada caso cambia el texto que muestra letra por letra y en el ultimo caso establece pantalla completa.
 export default function explicacion($container){
 d.addEventListener("click",(e)=> {
     if(e.target.matches($container)&& count <= 2||e.target.matches(`${$container} *`) && count <= 2){
+        $pic.style.borderRadius="50% 0px 50% 50%";
         createText(texto,englishText);
     }else if(e.target.matches($container) && count === 3 ||e.target.matches(`${$container} *`) && count === 3){
         clearInterval(intervaloTexto);
+        $pic.style.borderRadius="50%";
         $textinfo.style.transform="scale(0)";
         $textname.style.opacity = "0";
         setTimeout(() => {
@@ -40,11 +41,4 @@ let intervaloTexto = setInterval(() => {
         textinfo = [];
         i = 0;
         emptyArr = text.split("");
-        animation();
     }
-function animation(){
-    $pic.style.borderRadius="50% 0px 50% 50%";
-    setTimeout(() => {
-        $pic.style.borderRadius="50%";
-    }, 1000);
-}

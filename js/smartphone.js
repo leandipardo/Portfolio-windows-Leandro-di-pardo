@@ -4,7 +4,8 @@ $blur = document.querySelector(".blur"),
 $createSmartphone = document.querySelector(".create-smartphone");
 //crea smartphone al scrollear para abjo (Falta agregar el activarse cuando estas en modo celular).
 export default function smartphone(e){
-  let $ventanaabierta = document.querySelector(".ventana-abierta");
+  let $ventanaabierta = document.querySelector(".ventana-abierta"),
+  $menu = document.querySelector(".menu");
     if (e.deltaY === -100 && delta > 0 ) {
         delta--;
         $blur.style.backdropFilter=`blur(0px)`;
@@ -14,7 +15,7 @@ export default function smartphone(e){
           $blur.style.zIndex="-1";
         }, 200);
       }
-      if (e.deltaY === 100 && delta <= 1 && $ventanaabierta === null) {
+      if (e.deltaY === 100 && delta <= 1 && $ventanaabierta === null && $menu.className.includes("menu-translate")){
         $createSmartphone.setAttribute("src","assets/img/smartphone.png");
         $blur.style.zIndex=`10`;
         $blur.style.height=`100vh`;
