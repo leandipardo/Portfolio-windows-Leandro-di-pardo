@@ -33,7 +33,7 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     traducir();
     brillo();
     volumen();
-    newsSection();
+    // newsSection();
 });
 d.addEventListener("mousewheel", (r)=>{
     smartphone(r);

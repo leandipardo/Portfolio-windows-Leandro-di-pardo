@@ -16,7 +16,6 @@ export function isEnglish(){
     }
 
 }
-console.log(navigator.language)
 export function cambioIdioma(){
     $btn.classList.add("rotate-btn");
     if(lenguaje === "ingles"){
