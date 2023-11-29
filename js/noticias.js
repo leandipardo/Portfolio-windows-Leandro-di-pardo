@@ -10,9 +10,10 @@ export default function newsSection(){
                   'Content-Type': 'application/json',
                 },
                 params: {
-                  access_key: 'ACCESS_KEY',
-                  languages: 'es,-en',
+                  access_key: '27af236082b8f0aa1d04d1b116ea8acb',
+                  languages: 'es',
                   countries: 'au',
+                  categories: "technology",
                   limit: 30,
                   offset: 30,
                 }
