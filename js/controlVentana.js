@@ -125,7 +125,6 @@ function crearVentana(icon){
     $div.appendChild($input);
     $div.appendChild($input2);
     $div.appendChild($input3);
-    b.appendChild($fragment);
     mover(".movible");
     let $iconimg = d.createElement("img");
     $iconimg.setAttribute("identificador",`${$id}`);
@@ -135,6 +134,7 @@ function crearVentana(icon){
     $id++;
     $middleMenuConteiner.appendChild($iconimg);
     $div2.innerHTML=contenido; 
+    b.appendChild($fragment);
     cambioIdioma();
     if (window.outerWidth <= 1024){
         $section.classList.toggle("movible");
