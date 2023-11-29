@@ -12,6 +12,14 @@
     bottom: 38%;
     transform: rotatez(-90deg)translateY(-50%);
     z-index: -1;
+    opacity: 0;
+    animation: opacidad 1s ease-in .5s 1 forwards;
+    animation-play-state: running;
+  }
+  @keyframes opacidad {
+    to{
+      opacity: 1;
+    }
   }
   .va-title{
     position: relative;
@@ -68,25 +76,9 @@
     align-items: flex-end;
     border-radius: 10px;
     overflow: hidden;
-  }
-  .va-wave-div >img{
-    position:relative;
-    height: auto;
-    width: 200%;
-    scale: 2;
-    left: 50%;
-    animation: vaWaves 60s linear 0s infinite alternate backwards;
-    animation-play-state: running;
-  }
-  .va-wave-div >img:hover{
-    animation-play-state: paused;
-  }
-  @keyframes vaWaves {
-    from{
-      transform:translateX(0)
-    }to{
-      transform:translateX(-50%)
-    }
+    background-image: url(/assets/img/fondo\ contacto.svg);
+    background-size:125%;
+    background-position: 0 35%;
   }
   .va-tecnologia-div{
     font-family: 'Rubik', sans-serif;

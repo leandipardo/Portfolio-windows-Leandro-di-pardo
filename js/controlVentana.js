@@ -1,4 +1,5 @@
 const d = document,
+$fragment = document.createDocumentFragment(),
 b = d.querySelector("body");
 let $id = 0,
 $middleMenuConteiner=d.querySelector(".middle-menu-conteiner"),
@@ -28,9 +29,7 @@ export default function comportamientoVentanas(p,di,c){
                         <h2 data-lenguaje="Hi!👋🏻" data-lenguaje-español="Hola!👋🏻">Hola!👋🏻</h2>
                         <p data-lenguaje="My name is Leandro, I'm Argentine, and I'm 27 years old. Currently, I'm studying a Bachelor's degree in Systems. I have experience in graphic design jobs, and I've also self-taught web programming. My goal is to continue growing as a developer, constantly expanding my skills with new technologies and languages." data-lenguaje-español="Me llamo Leandro, soy argentino y tengo 27 años, actualmente estoy estudiando Licenciatura en Sistemas. Tengo experiencia en trabajos de diseño gráfico y también estudié programación web de manera autodidacta. Mi objetivo es seguir creciendo como desarrollador, ampliando constantemente mis habilidades con nuevas tecnologías y lenguajes.">Me llamo Leandro, soy argentino y tengo 27 años, actualmente estoy estudiando Licenciatura en Sistemas. Tengo experiencia en trabajos de diseño gráfico y también estudié programación web de manera autodidacta. Mi objetivo es seguir creciendo como desarrollador, ampliando constantemente mis habilidades con nuevas tecnologías y lenguajes.</p>
                     </div>
-                    <div class="va-wave-div">
-                        <img src="assets/img/wave.svg" alt="estadísticas random">
-                    </div>
+                    <div class="va-wave-div"></div>
                     <div class="va-tecnologia-div">
                         <h3 data-lenguaje="Skills." data-lenguaje-español="Habilidades.">Habilidades.</h3>
                     </div>
@@ -120,12 +119,13 @@ function crearVentana(icon){
     $input3.setAttribute("name","cerrar");
     $input3.setAttribute("type","button");
     $input3.setAttribute("value","✕");
-    b.appendChild($section);
+    $fragment.appendChild($section);
     $section.appendChild($div); 
     $section.appendChild($div2);
     $div.appendChild($input);
     $div.appendChild($input2);
     $div.appendChild($input3);
+    b.appendChild($fragment);
     mover(".movible");
     let $iconimg = d.createElement("img");
     $iconimg.setAttribute("identificador",`${$id}`);
