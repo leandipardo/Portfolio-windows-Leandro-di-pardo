@@ -1,28 +1,57 @@
 const d = document,
-$fetch = d.getElementById("fetch"),
-$fragment = d.createDocumentFragment;
+$container = d.querySelector(".mid-menu-container-noticias"),
+$template = d.getElementById("template-news").content,
+$fragment = d.createDocumentFragment();
+let contador = 5,
+lastcontador = 0;
 export default function newsSection(){
     async function getData(){
         try {
-            let res = await fetch("http://api.mediastack.com/v1/news",{
-                method: 'GET',
-                headers: {
-                  'Content-Type': 'application/json; charset=utf-8',
-                },
-                params: {
-                  access_key: '27af236082b8f0aa1d04d1b116ea8acb',
-                  languages: 'es',
-                  countries: 'au',
-                  categories: "technology",
-                  limit: 30,
-                  offset: 30,
+            // let res = await fetch("https://v2.jokeapi.dev/joke/Any?lang=es&blacklistFlags=nsfw,religious,political,racist,sexist,explicit"),
+            // json = await res.json();
+            // console.log(res,json,json.setup,json.delivery,json.joke);
+            let res = await fetch("https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=GELojqgXAOe3FPhqBBwPn9SUxBBOt3Uj"),
+            json = await res.json();
+            // console.log(json.results)
+            console.log(`contador: ${contador}// lastcontador:${lastcontador}`)
+            json.results.forEach((e,i)=>{
+                if(i >= lastcontador && i < contador && i < 20){
+                    $template.querySelector("article").classList.add("new");
+                    $template.querySelector("a").setAttribute("href",`${e.url}`);
+                    $template.querySelector("a").setAttribute("target","blank_");
+                    $template.querySelector("div").classList.add("new-text-container");
+                    $template.querySelector("h3").innerText = `${e.title}`;
+                    $template.querySelector("p").innerText = `${e.abstract}`;
+                    $template.querySelector("img").setAttribute("src",`${e.multimedia[0].url}`);
+                    let $clone = d.importNode($template, true);
+                    $fragment.appendChild($clone);
+                    $container.appendChild($fragment)
+                }else{
+                    return
                 }
-            });
-            json = await res.json;
-            console.log(res,json);
+            })
+            lastcontador+=5;
         } catch (err) {
-            
+            console.log(err)
         }
     }
     getData();
+    scrolling();
+}
+
+function scrolling(){
+    console.log("asd")
+    $container.addEventListener("scroll",e=>{
+        let $elementoFinal = d.querySelector(".mid-menu-container-noticias").lastElementChild;
+        let elem =$elementoFinal.getBoundingClientRect().bottom,
+        section =d.querySelector(".mid-menu-container-noticias").getBoundingClientRect().bottom;
+        if(elem > section){
+            return
+        }else{
+            if(contador < 20){
+                contador += 5;
+                newsSection();
+            }
+        }
+    })
 }

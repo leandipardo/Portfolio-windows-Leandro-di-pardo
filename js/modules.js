@@ -16,7 +16,6 @@ import traducir, { isEnglish } from "./traduccion.js";
 import brillo, { volumen } from "./brillo_volumen.js";
 import newsSection from "./noticias.js";
 d.addEventListener("DOMContentLoaded", (e)=>{
-
     cargaVideo("source-video","(min-width: 720px)","light");
     cartelInicio(".apagado");
     isEnglish();
@@ -33,7 +32,7 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     traducir();
     brillo();
     volumen();
-    // newsSection();
+    newsSection();
 });
 d.addEventListener("mousewheel", (r)=>{
     smartphone(r);

@@ -579,6 +579,9 @@ body{
   min-width: 30%;
   max-width: 40%;
   height: max-content;
+  margin: 5% 0;
+  border-radius: 50%;
+  transition: .5s ease;
 }
 .new-text-container h3{
   font-size: 1em;
