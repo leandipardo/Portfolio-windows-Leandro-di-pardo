@@ -125,7 +125,7 @@ function crearVentana(icon){
     $div.appendChild($input);
     $div.appendChild($input2);
     $div.appendChild($input3);
-    mover(".movible");
+    
     let $iconimg = d.createElement("img");
     $iconimg.setAttribute("identificador",`${$id}`);
     $iconimg.classList.add("button-menu");
@@ -136,6 +136,7 @@ function crearVentana(icon){
     $div2.innerHTML=contenido; 
     b.appendChild($fragment);
     cambioIdioma();
+    mover(".movible");
     if (window.outerWidth <= 1024){
         $section.classList.toggle("movible");
         $section.classList.add("maximizar-ventana");

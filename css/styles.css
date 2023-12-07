@@ -552,7 +552,7 @@ body{
   height: max-content;
   overflow: hidden;
   border-radius: 15px;
-  margin-bottom: 1%;
+  margin: 10px 0;
   background-color: var(--dark-mode-main-transparecy);
   opacity: .7;
   transition: opacity 2s ease,box-shadow .25s ease;
