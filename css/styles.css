@@ -643,8 +643,7 @@ body{
   z-index: 10;
 }
 .foto-perfil:hover{
-  height: 5rem;
-  width: 5rem;
+  transform: scale(1.5);
   background-color: var(--dark-mode-main-transparecy);
 }
 @keyframes backgroundPhoto {
