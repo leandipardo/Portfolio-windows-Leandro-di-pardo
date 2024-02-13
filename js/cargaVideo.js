@@ -11,7 +11,7 @@ export default function cargaVideo(id, mq,tipo){
         }else{
             source.setAttribute("src","/assets/video/wallpaper light mobile.mp4");
         }
-    } 
+    }
 }else if(tipo ==="dark"){
      responsive = (e) =>{
         if(e.matches){
