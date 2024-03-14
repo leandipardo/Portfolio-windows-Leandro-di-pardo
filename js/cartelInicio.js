@@ -8,7 +8,10 @@ confirmacion=false;
 export default function cartelInicio($apagado){
     $div.classList.add("parrafo-inicio");
     $div.innerHTML =`
-    <p>Bienvenido.</p>`;
+    <p>Bienvenido.
+    <br><br>
+    <span><i>Haz click para continuar.</i></span>
+    </p>`;
     $div.setAttribute("data-lenguaje","Welcome.");
     $body.appendChild($div);
         $div.style.opacity=1;

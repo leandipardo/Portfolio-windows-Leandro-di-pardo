@@ -65,9 +65,14 @@ body{
   z-index: 1;
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
   transition: opacity .5s ease;
   opacity: 0;
+  cursor: pointer;
+}
+.parrafo-inicio span{
+  font-size: 50%;
 }
 .wallpaper{
   height: calc(100dvh - 45px);
