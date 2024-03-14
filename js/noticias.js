@@ -20,7 +20,7 @@ export default function newsSection(){
                     $template.querySelector("div").classList.add("new-text-container");
                     $template.querySelector("h3").innerText = `${e.title}`;
                     $template.querySelector("p").innerText = `${e.abstract}`;
-                    $template.querySelector("img").setAttribute("src",`${e.multimedia[0].url}`);
+                    if (e.multimedia && e.multimedia.length > 0)$template.querySelector("img").setAttribute("src",`${e.multimedia[0].url}`);
                     let $clone = d.importNode($template, true);
                     $fragment.appendChild($clone);
                     $container.appendChild($fragment);
