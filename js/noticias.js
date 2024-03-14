@@ -12,8 +12,6 @@ export default function newsSection(){
             // console.log(res,json,json.setup,json.delivery,json.joke);
             let res = await fetch("https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=GELojqgXAOe3FPhqBBwPn9SUxBBOt3Uj"),
             json = await res.json();
-            // console.log(json.results)
-            console.log(`contador: ${contador}// lastcontador:${lastcontador}`)
             json.results.forEach((e,i)=>{
                 if(i >= lastcontador && i < contador && i < 20){
                     $template.querySelector("article").classList.add("new");
@@ -40,7 +38,6 @@ export default function newsSection(){
 }
 
 function scrolling(){
-    console.log("asd")
     $container.addEventListener("scroll",e=>{
         let $elementoFinal = d.querySelector(".mid-menu-container-noticias").lastElementChild;
         let elem =$elementoFinal.getBoundingClientRect().bottom,
